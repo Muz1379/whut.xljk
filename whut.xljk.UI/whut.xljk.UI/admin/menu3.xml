@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Tree runat="server" ShowBorder="false" ShowHeader="false" EnableArrows="true" EnableLines="true" ID="leftMenuTree0" Hidden="True">
+    <TreeNode Text="咨询预约管理" Expanded="true">
+      <TreeNode Text="修改值班表" NavigateUrl="~/admin/appointment/schedule.aspx"></TreeNode>
+      <TreeNode Text="预约审核状态" NavigateUrl="~/admin/appointment/messageReplied.aspx"></TreeNode>
+    </TreeNode>
+</Tree>

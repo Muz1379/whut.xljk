@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Tree runat="server" ShowBorder="false" ShowHeader="false" EnableArrows="true" EnableLines="true" ID="leftMenuTree0" Hidden="True">
+    <TreeNode Text="新闻管理" Expanded="true">
+      <TreeNode Text="文章管理" NavigateUrl="~/admin/article/articleList.aspx"></TreeNode>
+      <TreeNode Text="文件管理" NavigateUrl="~/admin/file/fileList.aspx"></TreeNode>
+      <TreeNode Text="首页大图" NavigateUrl="~/admin/imgchange/imgChange.aspx"></TreeNode>
+    </TreeNode>
+</Tree>

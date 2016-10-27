@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Tree runat="server" ShowBorder="false" ShowHeader="false" EnableArrows="true" EnableLines="true" ID="leftMenuTree0" Hidden="True">
+    <TreeNode Text="人员信息管理" Expanded="true">
+      <TreeNode Text="后台用户管理" NavigateUrl="~/admin/infoadmin/infoadminlist.aspx"></TreeNode>
+    </TreeNode>
+    <TreeNode Text="新闻管理" Expanded="true">
+      <TreeNode Text="文章管理" NavigateUrl="~/admin/article/articleList.aspx"></TreeNode>
+      <TreeNode Text="文件管理" NavigateUrl="~/admin/file/fileList.aspx"></TreeNode>
+      <TreeNode Text="首页大图" NavigateUrl="~/admin/imgchange/imgChange.aspx"></TreeNode>
+    </TreeNode>
+    <TreeNode Text="在线问答管理" Expanded="true">
+      <TreeNode Text="未回复问答" NavigateUrl="~/admin/message/messageNotHandled.aspx"></TreeNode>
+      <TreeNode Text="已回复问答管理" NavigateUrl="~/admin/message/messageReplied.aspx"></TreeNode>
+    </TreeNode>
+    <TreeNode Text="咨询预约管理" Expanded="true">
+      <TreeNode Text="修改值班表" NavigateUrl="~/admin/appointment/schedule.aspx"></TreeNode>
+      <TreeNode Text="预约审核状态" NavigateUrl="~/admin/appointment/messageReplied.aspx"></TreeNode>
+    </TreeNode>
+</Tree>
