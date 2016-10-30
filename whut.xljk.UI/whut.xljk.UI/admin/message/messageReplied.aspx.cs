@@ -42,18 +42,26 @@ namespace EmptyProjectNet45_FineUI.admin.message
 
         private void BindGrid()
         {
-            DataTable dt = messageBLL.GetAllMessageReplied();
+            
+
+            DataTable dt = GetPagedDataTable(Grid1.PageIndex, Grid1.PageSize);
+
 
             Grid1.DataSource = dt;
+
+            Grid1.RecordCount = GetTotalCount();
+
             Grid1.DataKeyNames = new string[] { "ID" };
             Grid1.DataBind();
         }
 
         private void BindGrid2()
         {
-            DataTable table = messageBLL.GetAllMessageReplied();
+            Grid1.RecordCount = GetTotalCount();
 
-            Grid1.DataSource = table;
+            DataTable dt = GetPagedDataTable(Grid1.PageIndex, Grid1.PageSize);
+
+            Grid1.DataSource = dt;
             Grid1.DataBind();
         }
 
@@ -64,7 +72,8 @@ namespace EmptyProjectNet45_FineUI.admin.message
 
         protected void Grid1_PageIndexChange(object sender, GridPageEventArgs e)
         {
-            //Grid1.PageIndex = e.NewPageIndex;
+            Grid1.PageIndex = e.NewPageIndex;
+            BindGrid();
         }
 
         protected void Window1_Close(object sender, WindowCloseEventArgs e)
@@ -103,5 +112,30 @@ namespace EmptyProjectNet45_FineUI.admin.message
         #endregion
 
 
+        private int GetTotalCount()
+        {
+            return messageBLL.GetAllMessageReplied().Rows.Count;
+        }
+
+        private DataTable GetPagedDataTable(int pageIndex, int pageSize)
+        {
+            DataTable source = messageBLL.GetAllMessageReplied();
+
+            DataTable paged = source.Clone();
+
+            int rowbegin = pageIndex * pageSize;
+            int rowend = (pageIndex + 1) * pageSize;
+            if (rowend > source.Rows.Count)
+            {
+                rowend = source.Rows.Count;
+            }
+
+            for (int i = rowbegin; i < rowend; i++)
+            {
+                paged.ImportRow(source.Rows[i]);
+            }
+
+            return paged;
+        }
     }
 }

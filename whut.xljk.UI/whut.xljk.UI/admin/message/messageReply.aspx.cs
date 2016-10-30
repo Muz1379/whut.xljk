@@ -42,8 +42,8 @@ namespace EmptyProjectNet45_FineUI.admin.message
                 txb_Sex.Text = message[0].Sex;
                 txb_TeacherName.Text = message[0].TeacherName;
                 txb_Email.Text = message[0].Email;
-                txb_ReplyEmailAddress.Text = "whut_psyhelp@163.com";
-                txb_ReplyEmailPwd.Text = "whutpsy1234";
+                txb_ReplyEmailAddress.Text = "whutpsyhelp@126.com";
+                txb_ReplyEmailPwd.Text = "whutpsyhelp1234";
                 txa_BriefQuestion.Text = message[0].BriefQuestion;
                 txa_DetailQuestion.Text = message[0].DetailQuestion;
 
@@ -123,35 +123,30 @@ namespace EmptyProjectNet45_FineUI.admin.message
             mail.To.Add(new MailAddress(message[0].Email));
             mail.From = new MailAddress(txb_ReplyEmailAddress.Text.Trim(),"武汉理工大学心理健康平台",System.Text.Encoding.UTF8);
             string _body = "";
-            string _subject = "【请假成功】单号为" + HtmlEditor1.Text + "的请假成功提醒--武汉理工大学管理学院学生工作办公室";
-            _body = "亲爱的同学："
-                    + "<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;你好！"
-                    + "<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;你的请假申请已经得到批准，请假类型为，请假单号为：<span style=\"color: red\"></span>。请假时间为<span style=\"color: red\">到</span>。"
-                    + "<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;请假期间请与辅导员老师以及所在班级保持联系，若因本人原因出现贻误教学或日常管理的现象，所造成的损失由请假人自行负责。请在请假结束后及时到辅导员办公室进行销假<span style=\"color: red\">(离校请假和晚点名请假必须到辅导员办公室销假)</span>。若未及时销假，将按旷课处理！请假期间，安全责任由请假人自行承担，请学会保护自己，遇到危险请及时报警！"
-                    + "<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>友情提醒：</strong>往返学校途中请注意安全，人流集中处注意保管好自己的财物。请不要乘坐没有营运资质的私人车辆。"
-                    + "<br/>"
-                    + "<br/><p align=right>武汉理工大学管理学院学生工作办公室</p>"
-                    + "<p align=right>" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "</p>";
+            string _subject = "回复：" + txa_BriefQuestion.Text.Trim();
+            _body = HtmlEditor1.Text + "<br/><br/>******************************************************" + "<br/>" +
+                            "这是一封系统自动发送的邮件通知，请不要直接回复，如有疑问，请联系管理员。" + "<br/>" +
+                            "<br/>请添加本邮箱为联系人，以便于即时收到邮件通知。祝 学习生活愉快！";
             mail.Body = _body;
             mail.Subject = _subject;
             mail.Priority = MailPriority.High;
             mail.IsBodyHtml = true;
-            mail.BodyEncoding = System.Text.Encoding.UTF8;
+            //mail.BodyEncoding = System.Text.Encoding.UTF8;
             
             #endregion
 
             #region 发送方服务器信息
 
             SmtpClient smtp = new SmtpClient();
-            if (txb_ReplyEmailAddress.Text.Trim().IndexOf("@163.com") >= 0)
+            if (txb_ReplyEmailAddress.Text.Trim().IndexOf("@126.com") >= 0)
             {
-                smtp.Host = "smtp.163.com";
+                smtp.Host = "smtp.126.com";
             }
-            smtp.UseDefaultCredentials = true;
-            smtp.EnableSsl = true;
+            //smtp.UseDefaultCredentials = true;
+            //smtp.EnableSsl = true;
             string mailFromAddress = txb_ReplyEmailAddress.Text.Split(new char[] { '@' })[0];
 
-            smtp.Credentials = new System.Net.NetworkCredential(mailFromAddress.Trim(), txb_ReplyEmailPwd.Text.Trim());
+            smtp.Credentials = new System.Net.NetworkCredential("whutpsyhelp@126.com", txb_ReplyEmailPwd.Text.Trim());
             smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
             smtp.Port = 25;
             //smtp.Send(mail);  //同步发送程序将被阻塞
@@ -176,39 +171,39 @@ namespace EmptyProjectNet45_FineUI.admin.message
 
             #region 保存至数据库
 
-            //messageModel.ID = messageID;
-            //messageModel.NickName = message[0].NickName;
-            //messageModel.Sex = message[0].Sex;
-            //messageModel.Email = message[0].Email;
-            //messageModel.Grade = message[0].Grade;
-            //messageModel.TeacherName = message[0].TeacherName;
-            //messageModel.BriefQuestion = txa_BriefQuestion.Text.Trim();
-            //messageModel.DetailQuestion = txa_DetailQuestion.Text.Trim();
-            //messageModel.QuestionTime = message[0].QuestionTime;
-            //messageModel.Reply = HtmlEditor1.Text.Trim();
-            //messageModel.ReplyTime = DateTime.Now;
-            //messageModel.Category = 0;
-            //if (HtmlEditor1.Text.Trim() != "")
-            //{
-            //    messageModel.Status = 1;
-            //}
+            messageModel.ID = messageID;
+            messageModel.NickName = message[0].NickName;
+            messageModel.Sex = message[0].Sex;
+            messageModel.Email = message[0].Email;
+            messageModel.Grade = message[0].Grade;
+            messageModel.TeacherName = message[0].TeacherName;
+            messageModel.BriefQuestion = txa_BriefQuestion.Text.Trim();
+            messageModel.DetailQuestion = txa_DetailQuestion.Text.Trim();
+            messageModel.QuestionTime = message[0].QuestionTime;
+            messageModel.Reply = HtmlEditor1.Text.Trim();
+            messageModel.ReplyTime = DateTime.Now;
+            messageModel.Category = 0;
+            if (HtmlEditor1.Text.Trim() != "")
+            {
+                messageModel.Status = 1;
+            }
 
-            //int result = messageBLL.Insert(messageModel);
+            int result = messageBLL.Update(messageModel);
 
-            //if (result > 0)
-            //{
-            //    Alert alert = new Alert();
-            //    alert.Message = "回复成功";
-            //    alert.Target = Target.Top;
-            //    alert.Show();
-            //}
-            //else
-            //{
-            //    Alert alert = new Alert();
-            //    alert.Message = "出现错误 请稍后再试";
-            //    alert.Target = Target.Top;
-            //    alert.Show();
-            //}
+            if (result > 0)
+            {
+                Alert alert = new Alert();
+                alert.Message = "回复成功";
+                alert.Target = Target.Top;
+                alert.Show();
+            }
+            else
+            {
+                Alert alert = new Alert();
+                alert.Message = "出现错误 请稍后再试";
+                alert.Target = Target.Top;
+                alert.Show();
+            }
 
             #endregion
 

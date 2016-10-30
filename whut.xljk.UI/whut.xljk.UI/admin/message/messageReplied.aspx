@@ -14,9 +14,9 @@
             Title="Panel" ShowBorder="false" ShowHeader="True" Layout="VBox"
             BoxConfigAlign="Stretch">
             <items>
-                <f:Grid ID="Grid1" Title="表格"  EnableCollapse="true" PageSize="5" ShowBorder="true" ShowHeader="true"
-            AllowPaging="true" runat="server" EnableCheckBoxSelect="True" Width="850px" Height="350px"
-            DataKeyNames="Id,Name" OnPageIndexChange="Grid1_PageIndexChange" EmptyText="没有数据！" OnRowCommand="Grid1_RowCommand">
+                 <f:Grid ID="Grid1" Title="表格" EnableCollapse="true" Width="800px" PageSize="5" ShowBorder="true" ShowHeader="true"
+            AllowPaging="true" runat="server" EnableCheckBoxSelect="True" ShowPagingMessage="false"
+             IsDatabasePaging="true" OnPageIndexChange="Grid1_PageIndexChange" DataKeyNames="ID">
                     <Columns>
                         <f:RowNumberField />
                         <f:BoundField TextAlign="Center" Width="100px" DataField="NickName" HeaderText="昵称" DataFormatString="{0}" />

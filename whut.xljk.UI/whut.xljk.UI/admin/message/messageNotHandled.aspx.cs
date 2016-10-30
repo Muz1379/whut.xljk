@@ -50,22 +50,32 @@ namespace EmptyProjectNet45_FineUI.admin.message
         private void BindGrid()
         {
 
-            DataTable dt = new DataTable(); 
+            //DataTable dt = new DataTable(); 
 
-            string teacherName = Session["teacherName"].ToString();
-            if(teacherName.Equals("不指定老师"))
-            {
-                dt = messageBLL.GetAllMessageNotReplied();
-            }
-            else
-            {
-                dt = messageBLL.GetAllMessageNotRepliedByTeacher(teacherName);
-                DataTable dt1 = messageBLL.GetAllMessageNotRepliedByTeacher("不指定老师");
-                dt.Merge(dt1);
-            }
+            //string teacherName = Session["teacherName"].ToString();
+            //if(teacherName.Equals("不指定老师"))
+            //{
+            //    dt = messageBLL.GetAllMessageNotReplied();
+            //}
+            //else
+            //{
+            //    dt = messageBLL.GetAllMessageNotRepliedByTeacher(teacherName);
+            //    DataTable dt1 = messageBLL.GetAllMessageNotRepliedByTeacher("不指定老师");
+            //    dt.Merge(dt1);
+            //}
             
 
+            //Grid1.DataSource = dt;
+            //Grid1.DataBind();
+
+            DataTable dt = GetPagedDataTable(Grid1.PageIndex, Grid1.PageSize);
+
+
             Grid1.DataSource = dt;
+
+            Grid1.RecordCount = GetTotalCount();
+
+            Grid1.DataKeyNames = new string[] { "ID" };
             Grid1.DataBind();
         }
 
@@ -126,7 +136,8 @@ namespace EmptyProjectNet45_FineUI.admin.message
 
         protected void Grid1_PageIndexChange(object sender, GridPageEventArgs e)
         {
-            //Grid1.PageIndex = e.NewPageIndex;
+            Grid1.PageIndex = e.NewPageIndex;
+            BindGrid();
         }
 
         protected void Window1_Close(object sender, WindowCloseEventArgs e)
@@ -136,5 +147,31 @@ namespace EmptyProjectNet45_FineUI.admin.message
  
 
         #endregion
+
+        private DataTable GetPagedDataTable(int pageIndex, int pageSize)
+        {
+            DataTable source = messageBLL.GetAllMessageNotRepliedByTeacher(Session["teacherName"].ToString().Trim());
+
+            DataTable paged = source.Clone();
+
+            int rowbegin = pageIndex * pageSize;
+            int rowend = (pageIndex + 1) * pageSize;
+            if (rowend > source.Rows.Count)
+            {
+                rowend = source.Rows.Count;
+            }
+
+            for (int i = rowbegin; i < rowend; i++)
+            {
+                paged.ImportRow(source.Rows[i]);
+            }
+
+            return paged;
+        }
+
+        private int GetTotalCount()
+        {
+            return messageBLL.GetAllMessageNotRepliedByTeacher(Session["teacherName"].ToString().Trim()).Rows.Count;
+        }
     }
 }
