@@ -12,52 +12,10 @@
 </head>
 
 <body>
-    <form id="body" runat="server">
-        <!--头部部分 各个页面通用*-->
-        <div class="header">
-            <img src="images/tittle.png">
-            <div class="search">
-                <!--搜索框*-->
-                <img src="images/searchBorder.png">
-                <img class="searchicon" src="images/searchIcon.png">
-                <img src="images/search00.png">
-            </div>
-        </div>
 
-        <!--导航部分 各个页面通用*-->
-        <div class="nav">
-            <ul>
-                <li>
-                    <!--每个li把icons和链接放在一起 达到hover的时候能将效果覆盖到icon上-->
-                    <img src="images/navHomeIcon.png"><a href="index.html">首页</a>
-                </li>
-                <li>
-                    <img src="images/navHomeIcon.png"><a href="p1_centersurvey.html">中心概况</a>
-                </li>
-                <li>
-                    <img src="images/navHomeIcon.png"><a href="p2_center_list.html">中心动态</a>
-                </li>
-                <li>
-                    <img src="images/navHomeIcon.png"><a href="p3_association_list.html">心协动态</a>
-                </li>
-                <li>
-                    <img src="images/navHomeIcon.png"><a href="p4_consultor.html">咨询师简介</a>
-                </li>
-                <li>
-                    <img src="images/navHomeIcon.png"><a href="p5_qaonline.html">在线问答</a>
-                </li>
-                <li>
-                    <img src="images/navHomeIcon.png"><a href="p6_appointment.html">咨询预约</a>
-                </li>
-                <li>
-                    <img src="images/navHomeIcon.png"><a href="p7_article_list.html">心灵驿站</a>
-                </li>
-                <li>
-                    <img src="images/navHomeIcon.png"><a href="p8_download.html">下载专区</a>
-                </li>
-            </ul>
-        </div>
+    <!--#include file="head.html"-->
 
+    <form class="form-horizontal" role="form" runat="server">
         <!--首页主体部分 首页编码为p0-->
         <div class="main">
             <div class="p5_main">
@@ -72,58 +30,83 @@
                     如果有需要请点击右上角粉色的在线预约按钮。预约到中心进行当面心理咨询<br>
                 </p>
 
-                <div id="dishide">
-                    <div class="input-group">
-                        <span class="label">昵称</span>
-                        <asp:TextBox ID="txb_NickName" runat="server" ></asp:TextBox>
+                <div id="contentform">
 
+                    <div class="form-group">
+                        <label for="txb_NickName" class="col-sm-2 control-label">昵称</label>
+                        <div class="col-sm-10">
+                            <asp:TextBox ID="txb_NickName" runat="server" class="form-control"></asp:TextBox>
+                        </div>
                     </div>
-                    <div class="input-group">
-                        <span class="label">年级</span>
-                        <asp:TextBox ID="txb_Grade" runat="server" ></asp:TextBox>
+                    <div class="form-group">
+                        <label for="txb_Grade" class="col-sm-2 control-label">年级</label>
+                        <div class="col-sm-10">
+                            <asp:TextBox ID="txb_Grade" runat="server" class="form-control"></asp:TextBox>
+                        </div>
                     </div>
-                    <div class="input-group">
-                        <span>性别</span>
-                        <asp:RadioButtonList ID="rbl_Sex" runat="server">
-                            <asp:ListItem Text="男" Value="1" Selected="True"></asp:ListItem>
-                            <asp:ListItem Text="女" Value="0"></asp:ListItem>
-                        </asp:RadioButtonList>
-                    </div>
-                    <div class="input-group">
-                        <span>邮箱</span>
-                        <asp:TextBox ID="txb_Email" runat="server" ></asp:TextBox>
-                    </div>
-                    <div class="input-group">
-                        <span>咨询老师</span>
-                        <asp:DropDownList ID="ddl_TeacherName" runat="server" ></asp:DropDownList>
 
-                       
+                    <div class="form-group">
+                        <label for="rbl_Sex" class="col-sm-2 control-label">性别</label>
+                        <div class="col-sm-10">
+                            <asp:RadioButtonList ID="rbl_Sex" runat="server">
+                                <asp:ListItem Text="男" Value="1" Selected="True"></asp:ListItem>
+                                <asp:ListItem Text="女" Value="0"></asp:ListItem>
+                            </asp:RadioButtonList>
+                        </div>
                     </div>
-                    <div class="input-group">
-                        <span>问题简介</span>
-                        <asp:TextBox ID="txb_BriefQuestion" runat="server" ></asp:TextBox>
+
+
+                    <div class="form-group">
+                        <label for="txb_Email" class="col-sm-2 control-label">邮箱</label>
+                        <div class="col-sm-10">
+                            <asp:TextBox ID="txb_Email" runat="server" class="form-control"></asp:TextBox>
+                        </div>
                     </div>
-                    <div class="input-group">
-                        <span>详情咨询</span>
-                        <asp:TextBox ID="txb_DetailQuestion" runat="server" ></asp:TextBox>
-                        
+                    <div class="form-group">
+                        <label for="ddl_TeacherName" class="col-sm-2 control-label">咨询老师</label>
+                        <div class="col-sm-10">
+                            <asp:DropDownList ID="ddl_TeacherName" runat="server" class="form-control"></asp:DropDownList>
+                        </div>
                     </div>
-                    <div class="input-group">
-                        <span class="label">是否愿意将您的问题供其他同学参考？</span>、
-                        <asp:RadioButtonList ID="rbl_Reference" runat="server"><asp:ListItem Text="是" Value="1" Selected="True"></asp:ListItem><asp:ListItem Text="否" Value="0"></asp:ListItem></asp:RadioButtonList>
+                    <div class="form-group">
+                        <label for="txb_BriefQuestion" class="col-sm-2 control-label">问题简介</label>
+                        <div class="col-sm-10">
+                            <asp:TextBox ID="txb_BriefQuestion" runat="server" class="form-control"></asp:TextBox>
+                        </div>
                     </div>
+                    <div class="form-group">
+                        <label for="txb_DetailQuestion" class="col-sm-2 control-label">详情咨询</label>
+                        <div class="col-sm-10">
+                            <asp:TextBox ID="txb_DetailQuestion" runat="server" class="form-control" TextMode="MultiLine"></asp:TextBox>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="rbl_Reference" class="col-sm-2 control-label">是否愿意将您的问题供其他同学参考？</label>
+                        <div class="col-sm-10">
+                            <asp:RadioButtonList ID="rbl_Reference" runat="server" RepeatDirection="Vertical">
+                                <asp:ListItem Text="是" Value="1" Selected="True"></asp:ListItem>
+                                <asp:ListItem Text="否" Value="0"></asp:ListItem>
+                            </asp:RadioButtonList>
+                        </div>
+                    </div>
+
                     <div class="btn-group">
-                        <asp:Button ID="btn_Submit" runat="server" Text="提交" CssClass="btn btn-primary submitbtn" OnClick="btn_Submit_Click"/>
-                        
+                        <asp:Button ID="btn_Submit"  class="form-control" runat="server" Text="提交" CssClass="iwantq" OnClick="btn_Submit_Click"/>
                     </div>
+
+
+
                 </div>
+
                 <div class="btn-group">
-                    <input type="button" id="iwantq" onclick="showtext()" value="我要留言" class="btn-primary">
+                    <input type="button" id="iwantq" onclick="showtext()" class="btn btn-default" value="我要留言">
                 </div>
+
                 <script type="text/javascript">
                     var i = 1;
                     function showtext() {
-                        var shide = document.getElementById("dishide");
+                        var shide = document.getElementById("contentform");
                         var changevalue = document.getElementById("iwantq");
                         if (i % 2 == 1) {
                             shide.style.display = 'block';
@@ -136,17 +119,29 @@
                         i++;
                     }
                 </script>
+
+
                 <div class="tags">
-                    <a href="qaonline.aspx?category=1"><img src="images/tags_1.png" class="tags_1"></a>
-                    <a href="qaonline.aspx?category=2"><img src="images/tags_2.png" class="tags_2"></a>
-                    <a href="qaonline.aspx?category=3"><img src="images/tags_3.png" class="tags_3"></a>
-                    <a href="qaonline.aspx?category=4"><img src="images/tags_4.png" class="tags_4"></a>
-                    <a href="qaonline.aspx?category=5"><img src="images/tags_5.png" class="tags_5"></a>
-                    <a href="qaonline.aspx?category=6"><img src="images/tags_6.png" class="tags_6"></a>
-                    <a href="qaonline.aspx?category=7"><img src="images/tags_7.png" class="tags_7"></a>
-                    <a href="qaonline.aspx?category=8"><img src="images/tags_8.png" class="tags_8"></a>
-                    <a href="qaonline.aspx?category=9"><img src="images/tags_9.png" class="tags_9"></a>
-                    <a href="qaonline.aspx?category=10"><img src="images/tags_10.png" class="tags_10"></a>
+                    <a href="qaonline.aspx?category=1">
+                        <img src="images/tags_1.png" class="tags_1"></a>
+                    <a href="qaonline.aspx?category=2">
+                        <img src="images/tags_2.png" class="tags_2"></a>
+                    <a href="qaonline.aspx?category=3">
+                        <img src="images/tags_3.png" class="tags_3"></a>
+                    <a href="qaonline.aspx?category=4">
+                        <img src="images/tags_4.png" class="tags_4"></a>
+                    <a href="qaonline.aspx?category=5">
+                        <img src="images/tags_5.png" class="tags_5"></a>
+                    <a href="qaonline.aspx?category=6">
+                        <img src="images/tags_6.png" class="tags_6"></a>
+                    <a href="qaonline.aspx?category=7">
+                        <img src="images/tags_7.png" class="tags_7"></a>
+                    <a href="qaonline.aspx?category=8">
+                        <img src="images/tags_8.png" class="tags_8"></a>
+                    <a href="qaonline.aspx?category=9">
+                        <img src="images/tags_9.png" class="tags_9"></a>
+                    <a href="qaonline.aspx?category=10">
+                        <img src="images/tags_10.png" class="tags_10"></a>
                 </div>
                 <%=MessageList %>
                 <!--页面切换-->
@@ -166,10 +161,11 @@
 
         </div>
 
-        <!--底部部分 各个页面通用*-->
-        <div class="footer">
-        </div>
-
     </form>
+
+    <!--底部部分 各个页面通用*-->
+    <div class="footer">
+    </div>
+
 </body>
 </html>
