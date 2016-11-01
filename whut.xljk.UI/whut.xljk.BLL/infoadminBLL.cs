@@ -75,5 +75,10 @@ namespace whut.xljk.BLL
 
             return dal.DeleteInfoAdmin(id);
         }
+
+        public DataTable GetInfoAdminTeacherList()
+        {
+            return dal.GetInfoAdminTeacherList();
+        }
     }
 }

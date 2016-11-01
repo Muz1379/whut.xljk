@@ -58,6 +58,11 @@ namespace whut.xljk.BLL
             return dal.GetAllMessageReplied();
         }
 
+        public DataTable GetAllMessageRepliedByTeacher(string teacherName)
+        {
+            return dal.GetAllMessageRepliedByTeacher(teacherName);
+        }
+
         public List<T_Message> GetMessageList(int pageIndex, int pageSize, int category, out int total)
         {
             return DataTableToList(dal.GetMessageList(pageIndex, pageSize, category, out total));

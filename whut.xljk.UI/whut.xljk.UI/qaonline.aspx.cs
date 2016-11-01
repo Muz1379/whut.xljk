@@ -15,6 +15,7 @@ namespace EmptyProjectNet45_FineUI
     public partial class qaonline : System.Web.UI.Page
     {
         UserBLL userBLL = new UserBLL();
+        infoadminBLL infoAdminBLL = new infoadminBLL();
         MessageBLL messageBLL = new MessageBLL();
 
         public string MessageList { get; set; }
@@ -57,14 +58,14 @@ namespace EmptyProjectNet45_FineUI
 
         private void DataBinding()
         {
-            DataTable dt = userBLL.GetTeacherTable();
+            DataTable dt = infoAdminBLL.GetInfoAdminTeacherList();
 
-            ddl_TeacherName.DataTextField = "Name";
-            ddl_TeacherName.DataValueField = "Account";
+            ddl_TeacherName.DataTextField = "C_InfoAdminName";
+            ddl_TeacherName.DataValueField = "C_InfoAdminName";
 
             DataRow dr = dt.NewRow();
-            dr["Name"] = "不指定老师";
-            dr["Account"] = "不指定老师";
+            dr["C_InfoAdminName"] = "不指定老师";
+            dr["C_InfoAdminName"] = "不指定老师";
             dt.Rows.Add(dr);
             //dt.Rows.Add("--请选择--");
 

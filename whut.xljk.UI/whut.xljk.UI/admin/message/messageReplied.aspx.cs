@@ -114,12 +114,12 @@ namespace EmptyProjectNet45_FineUI.admin.message
 
         private int GetTotalCount()
         {
-            return messageBLL.GetAllMessageReplied().Rows.Count;
+            return messageBLL.GetAllMessageRepliedByTeacher(Session["admin_name"].ToString().Trim()).Rows.Count;
         }
 
         private DataTable GetPagedDataTable(int pageIndex, int pageSize)
         {
-            DataTable source = messageBLL.GetAllMessageReplied();
+            DataTable source = messageBLL.GetAllMessageRepliedByTeacher(Session["admin_name"].ToString().Trim());
 
             DataTable paged = source.Clone();
 

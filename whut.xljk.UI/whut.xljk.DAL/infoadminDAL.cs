@@ -163,5 +163,11 @@ namespace whut.xljk.DAL
                 return false;
             }
         }
+
+        public DataTable GetInfoAdminTeacherList()
+        {
+            string sql = "select * from [T_InfoAdmin] where [C_InfoAdminCategory] = 1";
+            return SqlHelper.ExecuteDataTable(sql, CommandType.Text);
+        }
     }
 }

@@ -186,6 +186,12 @@ namespace whut.xljk.DAL
             return SqlHelper.ExecuteDataTable(sql, CommandType.Text);
         }
 
+        public DataTable GetAllMessageRepliedByTeacher(string teacherName)
+        {
+            string sql = "select * from [T_Message] where [TeacherName] = '" + teacherName + "'";
+            return SqlHelper.ExecuteDataTable(sql, CommandType.Text);
+        }
+
         /// <summary>
         /// 根据留言状态获取留言列表
         /// </summary>

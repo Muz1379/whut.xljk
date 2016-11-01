@@ -83,7 +83,7 @@ namespace EmptyProjectNet45_FineUI.admin.message
         {
             DataTable dt = new DataTable();
 
-            string teacherName = Session["teacherName"].ToString();
+            string teacherName = Session["admin_name"].ToString();
             if (teacherName.Equals("不指定老师"))
             {
                 dt = messageBLL.GetAllMessageNotReplied();
@@ -150,7 +150,7 @@ namespace EmptyProjectNet45_FineUI.admin.message
 
         private DataTable GetPagedDataTable(int pageIndex, int pageSize)
         {
-            DataTable source = messageBLL.GetAllMessageNotRepliedByTeacher(Session["teacherName"].ToString().Trim());
+            DataTable source = messageBLL.GetAllMessageNotRepliedByTeacher(Session["admin_name"].ToString().Trim());
 
             DataTable paged = source.Clone();
 
@@ -171,7 +171,7 @@ namespace EmptyProjectNet45_FineUI.admin.message
 
         private int GetTotalCount()
         {
-            return messageBLL.GetAllMessageNotRepliedByTeacher(Session["teacherName"].ToString().Trim()).Rows.Count;
+            return messageBLL.GetAllMessageNotRepliedByTeacher(Session["admin_name"].ToString().Trim()).Rows.Count;
         }
     }
 }

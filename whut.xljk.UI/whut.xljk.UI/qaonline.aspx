@@ -75,12 +75,12 @@
                 <div id="dishide">
                     <div class="input-group">
                         <span class="label">昵称</span>
-                        <asp:TextBox ID="txb_NickName" runat="server" CssClass="form-control"></asp:TextBox>
+                        <asp:TextBox ID="txb_NickName" runat="server" ></asp:TextBox>
 
                     </div>
                     <div class="input-group">
                         <span class="label">年级</span>
-                        <asp:TextBox ID="txb_Grade" runat="server" CssClass="form-control"></asp:TextBox>
+                        <asp:TextBox ID="txb_Grade" runat="server" ></asp:TextBox>
                     </div>
                     <div class="input-group">
                         <span>性别</span>
@@ -91,63 +91,21 @@
                     </div>
                     <div class="input-group">
                         <span>邮箱</span>
-                        <asp:TextBox ID="txb_Email" runat="server" CssClass="form-control"></asp:TextBox>
+                        <asp:TextBox ID="txb_Email" runat="server" ></asp:TextBox>
                     </div>
                     <div class="input-group">
                         <span>咨询老师</span>
                         <asp:DropDownList ID="ddl_TeacherName" runat="server" ></asp:DropDownList>
-                        <!--<asp:SqlDataSource ID="SqlDataSource1" runat="server" ConflictDetection="CompareAllValues" ConnectionString="<%$ ConnectionStrings:DB_whut_xljkConnectionString %>" DeleteCommand="DELETE FROM [T_User] WHERE [Account] = @original_Account AND (([Password] = @original_Password) OR ([Password] IS NULL AND @original_Password IS NULL)) AND (([Name] = @original_Name) OR ([Name] IS NULL AND @original_Name IS NULL)) AND (([Tel] = @original_Tel) OR ([Tel] IS NULL AND @original_Tel IS NULL)) AND (([Sex] = @original_Sex) OR ([Sex] IS NULL AND @original_Sex IS NULL)) AND (([Birth] = @original_Birth) OR ([Birth] IS NULL AND @original_Birth IS NULL)) AND (([Email] = @original_Email) OR ([Email] IS NULL AND @original_Email IS NULL)) AND (([Status] = @original_Status) OR ([Status] IS NULL AND @original_Status IS NULL))" InsertCommand="INSERT INTO [T_User] ([Account], [Password], [Name], [Tel], [Sex], [Birth], [Email], [Status]) VALUES (@Account, @Password, @Name, @Tel, @Sex, @Birth, @Email, @Status)" OldValuesParameterFormatString="original_{0}" SelectCommand="SELECT * FROM [T_User] WHERE ([Status] = @Status)" UpdateCommand="UPDATE [T_User] SET [Password] = @Password, [Name] = @Name, [Tel] = @Tel, [Sex] = @Sex, [Birth] = @Birth, [Email] = @Email, [Status] = @Status WHERE [Account] = @original_Account AND (([Password] = @original_Password) OR ([Password] IS NULL AND @original_Password IS NULL)) AND (([Name] = @original_Name) OR ([Name] IS NULL AND @original_Name IS NULL)) AND (([Tel] = @original_Tel) OR ([Tel] IS NULL AND @original_Tel IS NULL)) AND (([Sex] = @original_Sex) OR ([Sex] IS NULL AND @original_Sex IS NULL)) AND (([Birth] = @original_Birth) OR ([Birth] IS NULL AND @original_Birth IS NULL)) AND (([Email] = @original_Email) OR ([Email] IS NULL AND @original_Email IS NULL)) AND (([Status] = @original_Status) OR ([Status] IS NULL AND @original_Status IS NULL))">
-                            <DeleteParameters>
-                                <asp:Parameter Name="original_Account" Type="String" />
-                                <asp:Parameter Name="original_Password" Type="String" />
-                                <asp:Parameter Name="original_Name" Type="String" />
-                                <asp:Parameter Name="original_Tel" Type="String" />
-                                <asp:Parameter Name="original_Sex" Type="String" />
-                                <asp:Parameter Name="original_Birth" Type="String" />
-                                <asp:Parameter Name="original_Email" Type="String" />
-                                <asp:Parameter Name="original_Status" Type="String" />
-                            </DeleteParameters>
-                            <InsertParameters>
-                                <asp:Parameter Name="Account" Type="String" />
-                                <asp:Parameter Name="Password" Type="String" />
-                                <asp:Parameter Name="Name" Type="String" />
-                                <asp:Parameter Name="Tel" Type="String" />
-                                <asp:Parameter Name="Sex" Type="String" />
-                                <asp:Parameter Name="Birth" Type="String" />
-                                <asp:Parameter Name="Email" Type="String" />
-                                <asp:Parameter Name="Status" Type="String" />
-                            </InsertParameters>
-                            <SelectParameters>
-                                <asp:Parameter DefaultValue="1" Name="Status" Type="String" />
-                            </SelectParameters>
-                            <UpdateParameters>
-                                <asp:Parameter Name="Password" Type="String" />
-                                <asp:Parameter Name="Name" Type="String" />
-                                <asp:Parameter Name="Tel" Type="String" />
-                                <asp:Parameter Name="Sex" Type="String" />
-                                <asp:Parameter Name="Birth" Type="String" />
-                                <asp:Parameter Name="Email" Type="String" />
-                                <asp:Parameter Name="Status" Type="String" />
-                                <asp:Parameter Name="original_Account" Type="String" />
-                                <asp:Parameter Name="original_Password" Type="String" />
-                                <asp:Parameter Name="original_Name" Type="String" />
-                                <asp:Parameter Name="original_Tel" Type="String" />
-                                <asp:Parameter Name="original_Sex" Type="String" />
-                                <asp:Parameter Name="original_Birth" Type="String" />
-                                <asp:Parameter Name="original_Email" Type="String" />
-                                <asp:Parameter Name="original_Status" Type="String" />
-                            </UpdateParameters>
-                        </asp:SqlDataSource>
-                        -->
+
                        
                     </div>
                     <div class="input-group">
                         <span>问题简介</span>
-                        <asp:TextBox ID="txb_BriefQuestion" runat="server" CssClass="form-control"></asp:TextBox>
+                        <asp:TextBox ID="txb_BriefQuestion" runat="server" ></asp:TextBox>
                     </div>
                     <div class="input-group">
                         <span>详情咨询</span>
-                        <asp:TextBox ID="txb_DetailQuestion" runat="server" CssClass="form-control"></asp:TextBox>
+                        <asp:TextBox ID="txb_DetailQuestion" runat="server" ></asp:TextBox>
                         
                     </div>
                     <div class="input-group">
