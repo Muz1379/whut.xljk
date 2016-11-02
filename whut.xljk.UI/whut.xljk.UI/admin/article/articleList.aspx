@@ -23,7 +23,7 @@
         </Rows>
     </f:Form>
     <f:Grid ID="Grid1" EnableCollapse="false" PageSize="5" ShowBorder="true" ShowHeader="false"
-        BoxFlex="1"
+        BoxFlex="1" 
         AllowPaging="true" runat="server" EnableCheckBoxSelect="True"
         DataKeyNames="C_ArticleId,C_ArticleTitle" IsDatabasePaging="true"
         AllowSorting="true" SortField="C_ArticleId" SortDirection="ASC"

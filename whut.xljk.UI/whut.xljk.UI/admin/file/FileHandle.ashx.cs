@@ -37,7 +37,7 @@ namespace EmptyProjectNet45_FineUI.admin.file
             extTable.Add("file", "doc,docx,xls,xlsx,ppt,pdf,txt,html,txt,zip,rar");
 
             //最大文件大小
-            int maxSize = 1000000;
+            int maxSize = 2000000;
             this.context = context;
 
             HttpPostedFile imgFile = context.Request.Files["files"];
@@ -54,6 +54,7 @@ namespace EmptyProjectNet45_FineUI.admin.file
             string dirName = "";
             String fileName = imgFile.FileName;
             String fileExt = Path.GetExtension(fileName).ToLower();
+
             if (CheckFileExt(fileExt) != "")
 
                 dirName = CheckFileExt(fileExt);
@@ -119,18 +120,7 @@ namespace EmptyProjectNet45_FineUI.admin.file
             model.FileTime = DateTime.Now.ToString();
             model.FileSector = "liushangnan";
             bll.Insert(model);
-            context.Response.Redirect("fileList.aspx");
-            //JavaScriptSerializer java = new JavaScriptSerializer();
-            //context.Response.ContentType = "text/plain";
-            //context.Response.Write(java.Serialize(fileDes));
-            //context.Response.End();
-
-            //Hashtable hash = new Hashtable();
-            //hash["error"] = 0;
-            //hash["url"] = fileUrl;
-            //context.Response.AddHeader("Content-Type", "text/html; charset=UTF-8");
-            //context.Response.Write(LitJson.JsonMapper.ToJson(hash));
-            //context.Response.End();
+            context.Response.Write("添加成功，请关闭此窗口~");
         }
 
         private void showError(string message)
@@ -139,7 +129,7 @@ namespace EmptyProjectNet45_FineUI.admin.file
             hash["error"] = 1;
             hash["message"] = message;
             context.Response.AddHeader("Content-Type", "text/html; charset=UTF-8");
-            context.Response.Write(LitJson.JsonMapper.ToJson(hash));
+            context.Response.Write(message);
             context.Response.End();
         }
         public bool IsReusable

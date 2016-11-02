@@ -46,12 +46,14 @@ namespace EmptyProjectNet45_FineUI.admin.infoadmin
 
                 if (bll.Insert(model)==1)
                 {
-                    Response.Write("文章内容修改成功，请关闭窗口~");
+                    Alert.ShowInTop("添加成功~");
+
+                    PageContext.RegisterStartupScript(ActiveWindow.GetHideRefreshReference());
                 }
             }
             else
             {
-                Response.Write("用户名存在");
+                Alert.ShowInTop("用户存在，请重新填写");
             }
         }
     }

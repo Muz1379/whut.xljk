@@ -32,7 +32,7 @@
 
     <!--------------------------------------数据显示部分----------------------------------------------->
 
-    <div class="main">
+    <div class="main" style="height:auto">
 
         <!--首页轮播图-->
         <div id="banner_tabs" class="flexslider">

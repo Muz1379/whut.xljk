@@ -131,6 +131,7 @@ namespace EmptyProjectNet45_FineUI.admin.common
         /// <param name="e"></param>
         protected void btnEdit_Click(object sender, EventArgs e)
         {
+
             if (Page.Grid.SelectedRowIndexArray.Length == 0)
             {
                 Alert.ShowInTop("请至少选择一条记录！");
@@ -138,6 +139,7 @@ namespace EmptyProjectNet45_FineUI.admin.common
             }
 
             PageContext.RegisterStartupScript(Window1.GetShowReference(Page.GetEditUrl(), "编辑"));
+
         }
 
         /// <summary>
