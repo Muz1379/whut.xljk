@@ -1,4 +1,4 @@
-@charset "utf-8";
+﻿@charset "utf-8";
 
 a:link { 
 font-size: 14px; 
@@ -39,7 +39,7 @@ body{
 /* 主体 */
 .main{
 	width:80%;
-	height:auto;
+	height:650px;
 	margin:0 auto;
 	}
 
@@ -128,12 +128,24 @@ body{
 	}
 /*三个按钮*/
 
-/*3.footer部分*/
-.footer{
-	overflow:hidden;
-	height:10vw;
-	width:100%;
-	margin-top:5vw;
-	background-image:url(../../images/footerbg.png);
-    background-size:100% auto; 
-	}
+
+
+#footer{width:100%; height:150px; margin-top:40px;background-color: rgba(181, 245, 182, 0.30);}
+
+.foot_main, .foot_one, .foot_two{width:990px;}
+
+.foot_main{height:150px; margin:0 auto; }
+
+.foot_one{margin-left:284px;}
+
+.foot_one ul li{float:left; list-style:none; width:90px; height:30px; color:#666; font-size:16px; font-weight:bolder; margin-top:28px;}
+
+.foot_one ul li a{ color:#666; text-decoration:none;}
+
+.foot_one ul li a:hover{color:#567fe6; text-decoration:underline;}
+
+.foot_one ul li span{padding-left:15px;}
+
+.foot_two{float:left; margin-top:30px; }
+
+.foot_two p{font-size:14px; color:#666; text-align:center;}

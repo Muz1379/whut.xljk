@@ -5,16 +5,17 @@
 <head>
     <meta charset="utf-8">
     <title>在线问答</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/p5_qaonline.css" rel="stylesheet" type="text/css">
     <link href="css/common/reset.css" rel="stylesheet" type="text/css">
     <link href="css/common/common.css" rel="stylesheet" type="text/css">
-    <link href="Content/bootstrap.min.css" rel="stylesheet" />
 </head>
 
 <body>
 
     <!--#include file="head.html"-->
-
+    
+    <div style="height:1000px;">
     <form class="form-horizontal" role="form" runat="server">
         <!--首页主体部分 首页编码为p0-->
         <div class="main">
@@ -30,7 +31,7 @@
                     如果有需要请点击右上角粉色的在线预约按钮。预约到中心进行当面心理咨询<br>
                 </p>
 
-                <div id="contentform">
+                <div id="contentform" style="display:none;">
 
                     <div class="form-group">
                         <label for="txb_NickName" class="col-sm-2 control-label">昵称</label>
@@ -150,22 +151,16 @@
             </div>
 
             <!--首页轮播图右侧的三个按钮 各个页面通用-->
-            <div class="button">
-                <a>
-                    <img src="images/button_1.png"></a>
-                <a>
-                    <img src="images/button_2.png"></a>
-                <a>
-                    <img src="images/button_3.png"></a>
-            </div>
+    <!--#include file="imghref.html"-->
 
         </div>
 
     </form>
 
-    <!--底部部分 各个页面通用*-->
-    <div class="footer">
     </div>
+
+    <!--------------------------------------数据显示部分----------------------------------------------->
+    <!--#include file="foot.html"-->
 
 </body>
 </html>

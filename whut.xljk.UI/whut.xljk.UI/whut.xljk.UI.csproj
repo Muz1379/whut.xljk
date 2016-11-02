@@ -49,7 +49,7 @@
   <ItemGroup>
     <Reference Include="FineUI, Version=4.2.3.0, Culture=neutral, PublicKeyToken=0ff1835d01c384a9, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\FineUI.dll</HintPath>
+      <HintPath>..\lib\FineUI\FineUI.dll</HintPath>
     </Reference>
     <Reference Include="LitJson">
       <HintPath>..\packages\LitJson.0.7.0\lib\LitJson.dll</HintPath>
@@ -2561,6 +2561,7 @@
     <Content Include="FileSavePath\file\20150911\20150911213008_8581.txt" />
     <Content Include="FileSavePath\file\20150911\20150911213031_4443.txt" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="foot.html" />
     <Content Include="head.html" />
     <Content Include="images\address_icon.png" />
     <Content Include="images\ad_ctr.png" />
@@ -2711,8 +2712,8 @@
     <Content Include="images\zixunshiTittle.png" />
     <Content Include="images\zixunTittle.png" />
     <Content Include="images\zuozheIcon.png" />
+    <Content Include="imghref.html" />
     <Content Include="index.aspx" />
-    <Content Include="index.html" />
     <Content Include="js\bootstrap.min.js" />
     <Content Include="js\classie.js" />
     <Content Include="js\content_right_fixed.js" />
@@ -2724,19 +2725,6 @@
     <Content Include="obj\Debug\EmptyProjectNet45_FineUI.csproj.FileListAbsolute.txt" />
     <Content Include="obj\Debug\EmptyProjectNet45_FineUI.dll" />
     <Content Include="obj\Debug\EmptyProjectNet45_FineUI.pdb" />
-    <Content Include="p1_centersurvey.html" />
-    <Content Include="p2_center_content.html" />
-    <Content Include="p2_center_list.html" />
-    <Content Include="p3_association_content.html" />
-    <Content Include="p3_association_list.html" />
-    <Content Include="p4_consultdetails.html" />
-    <Content Include="p4_consultor.html" />
-    <Content Include="p5_qaonline.html" />
-    <Content Include="p6_appointment.html" />
-    <Content Include="p7_article_content.html" />
-    <Content Include="p7_article_list.html" />
-    <Content Include="p8_downdetails.html" />
-    <Content Include="p8_download.html" />
     <Content Include="qaonline.aspx" />
     <Content Include="res\icon\accept.png" />
     <Content Include="res\icon\add.png" />
