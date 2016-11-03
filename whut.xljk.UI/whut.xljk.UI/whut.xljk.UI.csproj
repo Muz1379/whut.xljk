@@ -676,6 +676,7 @@
     <Content Include="admin\file\fileAdd.aspx" />
     <Content Include="admin\file\fileList.aspx" />
     <Content Include="admin\imgchange\imgChange.aspx" />
+    <Content Include="admin\imgchange\imglist.aspx" />
     <Content Include="admin\infoadmin\infoadminadd.aspx" />
     <Content Include="admin\infoadmin\infoadmindetail.aspx" />
     <Content Include="admin\infoadmin\infoadminlist.aspx" />
@@ -4605,6 +4606,13 @@
     </Compile>
     <Compile Include="admin\imgchange\imgChange.aspx.designer.cs">
       <DependentUpon>imgChange.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\imgchange\imglist.aspx.cs">
+      <DependentUpon>imglist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\imgchange\imglist.aspx.designer.cs">
+      <DependentUpon>imglist.aspx</DependentUpon>
     </Compile>
     <Compile Include="admin\infoadmin\infoadminadd.aspx.cs">
       <DependentUpon>infoadminadd.aspx</DependentUpon>

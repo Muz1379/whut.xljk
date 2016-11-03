@@ -5,4 +5,4 @@
       <TreeNode Text="修改值班表" NavigateUrl="~/admin/appointment/schedule.aspx"></TreeNode>
       <TreeNode Text="预约审核状态" NavigateUrl="~/admin/appointment/messageReplied.aspx"></TreeNode>
     </TreeNode>
-</Tree>
+</Tree>s

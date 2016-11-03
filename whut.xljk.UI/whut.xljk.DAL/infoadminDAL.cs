@@ -118,6 +118,7 @@ namespace whut.xljk.DAL
             strSql.Append("update T_InfoAdmin  set ");
             strSql.Append("C_InfoAdminPwd=@pwd,");
             strSql.Append("C_InfoAdminName=@name,");
+            strSql.Append("C_InfoAdminCategory=@cat,");
             strSql.Append("C_InfoAdminTel=@tel,");
             strSql.Append("C_InfoAdminEmail=@email");
             strSql.Append(" where C_InfoAdminAccount=@id");
@@ -125,13 +126,15 @@ namespace whut.xljk.DAL
                     new SqlParameter("@id", SqlDbType.Char,8),
                     new SqlParameter("@pwd", SqlDbType.NVarChar,100),
                     new SqlParameter("@name", SqlDbType.NVarChar,40),
+                    new SqlParameter("@cat", SqlDbType.Int),
                     new SqlParameter("@tel", SqlDbType.Char,11),
                     new SqlParameter("@email", SqlDbType.NVarChar,20)};
             parameters[0].Value = model.InfoAdminAccount;
             parameters[1].Value = model.InfoAdminPwd;
             parameters[2].Value = model.InfoAdminName;
-            parameters[3].Value = model.InfoAdminTel;
-            parameters[4].Value = model.InfoAdminEmail;
+            parameters[3].Value = model.InfoAdminCategory;
+            parameters[4].Value = model.InfoAdminTel;
+            parameters[5].Value = model.InfoAdminEmail;
             int flag = SqlHelper.ExecuteNonQuery(strSql.ToString(), CommandType.Text, parameters);
             if (flag > 0)
             {

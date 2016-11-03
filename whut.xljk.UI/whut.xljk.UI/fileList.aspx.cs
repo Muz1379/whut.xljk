@@ -37,7 +37,7 @@ namespace EmptyProjectNet45_FineUI
 
                 foreach (var model in list)
                 {
-                    sb.AppendFormat("<li><a href='fileDetail.aspx?fileid={0}' target='_blank' title=''>{1}/a><span>{2}</span></li>", model.FileId, model.FileSummary, model.FileTime);
+                    sb.AppendFormat("<li><a href='fileDetail.aspx?fileid={0}' target='_blank' title=''>{1}</a><span>{2}</span></li>", model.FileId, model.FileSummary, model.FileTime);
                 }
             }
             return sb.ToString();

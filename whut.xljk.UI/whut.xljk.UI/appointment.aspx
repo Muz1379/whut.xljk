@@ -14,50 +14,9 @@
 
 </head>
 <body>
-    <form id="form1" runat="server">
-        <div class="header">
-            <img src="images/tittle.png">
-            <div class="search">
-                <!--搜索框*-->
-                <img src="images/searchBorder.png">
-                <img class="searchicon" src="images/searchIcon.png">
-                <img src="images/search00.png">
-            </div>
-        </div>
+    <!--#include file="head.html"-->
 
-        <!--导航部分 各个页面通用*-->
-        <div class="nav">
-            <ul>
-                <li>
-                    <!--每个li把icons和链接放在一起 达到hover的时候能将效果覆盖到icon上-->
-                    <img src="images/navHomeIcon.png"><a href="index.html">首页</a>
-                </li>
-                <li>
-                    <img src="images/navHomeIcon.png"><a href="p1_centersurvey.html">中心概况</a>
-                </li>
-                <li>
-                    <img src="images/navHomeIcon.png"><a href="p2_center_list.html">中心动态</a>
-                </li>
-                <li>
-                    <img src="images/navHomeIcon.png"><a href="p3_association_list.html">心协动态</a>
-                </li>
-                <li>
-                    <img src="images/navHomeIcon.png"><a href="p4_consultor.html">咨询师简介</a>
-                </li>
-                <li>
-                    <img src="images/navHomeIcon.png"><a href="p5_qaonline.html">在线问答</a>
-                </li>
-                <li>
-                    <img src="images/navHomeIcon.png"><a href="p6_appointment.html">咨询预约</a>
-                </li>
-                <li>
-                    <img src="images/navHomeIcon.png"><a href="p7_article_list.html">心灵驿站</a>
-                </li>
-                <li>
-                    <img src="images/navHomeIcon.png"><a href="p8_download.html">下载专区</a>
-                </li>
-            </ul>
-        </div>
+    <!--------------------------------------数据显示部分----------------------------------------------->
         <!--主体部分-->
         <div class="main">
             <div class="appoint_content">
@@ -1121,6 +1080,7 @@
                 </div>
             </div>
             <div id="right">
+
                 <!--右侧-->
                 <!--首页轮播图右侧的三个按钮 各个页面通用-->
                 <!--#include file="imghref.html"-->

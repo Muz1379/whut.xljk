@@ -75,7 +75,7 @@
                         </f:GroupPanel>
                         <f:GroupPanel ID="GroupPanel2" Layout="Anchor" Title="账单地址" runat="server">
                             <Items>
-                                <f:CheckBox runat="server" Checked="true" ID="cbxSameAsContactAddress" AutoPostBack="true" OnCheckedChanged="cbxSameAsContactAddress_CheckedChanged" Text="和联系人地址相同"></f:CheckBox>
+                                <f:CheckBox runat="server" Checked="true" ID="cbxSameAsContactAddress" AutoPostBack="true"  Text="和联系人地址相同"></f:CheckBox>
                                 <f:TextBox ID="tbxBillingAddress" Enabled="false" Label="详细地址" Required="true" ShowRedStar="true" runat="server">
                                 </f:TextBox>
                                 <f:Panel ID="Panel3" Layout="HBox" BoxConfigAlign="Stretch" CssClass="formitem" ShowHeader="false" ShowBorder="false" runat="server">
