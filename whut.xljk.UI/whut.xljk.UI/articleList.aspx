@@ -14,7 +14,7 @@
 
 <body>
 
- <!--#include file="head.html"--> 
+    <!--#include file="head.html"-->
     <!--主体部分-->
     <div class="main">
         <div class="list">
@@ -42,18 +42,11 @@
             <!--页面切换-->
         </div>
         <!--首页轮播图右侧的三个按钮 各个页面通用-->
-        <div class="button">
-            <a>
-                <img src="images/button_1.png"></a>
-            <a>
-                <img src="images/button_2.png"></a>
-            <a>
-                <img src="images/button_3.png"></a>
-        </div>
+        <!--#include file="imghref.html"-->
 
     </div>
-    <!--底部部分 各个页面通用*-->
-    <div class="footer">
-    </div>
+
+    <!--------------------------------------数据显示部分----------------------------------------------->
+    <!--#include file="foot.html"-->
 </body>
 </html>

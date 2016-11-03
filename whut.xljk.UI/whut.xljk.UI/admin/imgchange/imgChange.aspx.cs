@@ -69,6 +69,9 @@ namespace EmptyProjectNet45_FineUI.admin.imgchange
                 }
             }
         }
+
+
+        //对数据库进行一定的修改
         public bool JiaoTiChangeInfo(T_ImgChange model, int chooseImg)
         {
             List<T_ImgChange> list = bll.GetList();

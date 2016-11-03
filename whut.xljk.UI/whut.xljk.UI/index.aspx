@@ -28,11 +28,11 @@
 
 <body style="background-image: url(images/background.png);">
 
-       <!--#include file="head.html"--> 
+    <!--#include file="head.html"-->
 
     <!--------------------------------------数据显示部分----------------------------------------------->
 
-    <div class="main">
+    <div class="main" style="height:auto">
 
         <!--首页轮播图-->
         <div id="banner_tabs" class="flexslider">
@@ -61,15 +61,8 @@
             </div>
         </div>
 
-        <!--首页轮播图右侧的三个按钮 各个页面通用-->
-        <div class="button" style="width: 26vw; height: 25.2vw;">
-            <a>
-                <img src="images/button_1.png" style="width: 20vw; margin: 3.2vw auto;"></a>
-            <a>
-                <img src="images/button_2.png" style="width: 20vw; margin: 3.2vw auto;"></a>
-            <a>
-                <img src="images/button_3.png" style="width: 20vw; margin: 3.2vw auto;"></a>
-        </div>
+            <!--首页轮播图右侧的三个按钮 各个页面通用-->
+    <!--#include file="imghref.html"-->
 
         <!--中心动态 2-->
         <div class="p0_news">
@@ -81,7 +74,9 @@
                 <%=xwdt_toutiao %>
             </div>
 
-            <a href="articleList.aspx?articleCategory=2"><p style="color: #33d49d; margin-left: 44vw; cursor: pointer; font-size: 1.2vw;">more></p></a>
+            <a href="articleList.aspx?articleCategory=2">
+                <p style="color: #33d49d; margin-left: 44vw; cursor: pointer; font-size: 1.2vw;">more></p>
+            </a>
 
             <!--心协动态 3-->
             <img src="images/xinxie.png" style="display: block; clear: left; width: 4vw;">
@@ -90,7 +85,9 @@
                 <%=xinxie_toutiao%>
             </div>
 
-            <a href="articleList.aspx?articleCategory=3"><p style="color: #33d49d; margin-left: 44vw; cursor: pointer; font-size: 1.2vw;">more></p></a>
+            <a href="articleList.aspx?articleCategory=3">
+                <p style="color: #33d49d; margin-left: 44vw; cursor: pointer; font-size: 1.2vw;">more></p>
+            </a>
         </div>
 
 
@@ -102,12 +99,15 @@
             <hr>
             <p>
                 <img src="images/wen.png">&nbsp;好方啊，大学好迷茫。。
+           
             </p>
             <p>
                 <img src="images/da.png">&nbsp;同学你好，美好的大学在向你招手，只要...
+           
             </p>
             <p>
                 <img src="images/wen.png">&nbsp;好方啊，大学好迷茫。。
+           
             </p>
             <hr style="margin-top: 2vw;">
         </div>
@@ -122,15 +122,16 @@
                 <%=preMeiwen %>
             </div>
 
-            <a href="articleList.aspx?articleCategory=5"><p style="color: #33d49d; cursor: pointer; font-size: 1.2vw; text-align:right">more></p></a>
+            <a href="articleList.aspx?articleCategory=5">
+                <p style="color: #33d49d; cursor: pointer; font-size: 1.2vw; text-align: right">more></p>
+            </a>
 
         </div>
     </div>
 
 
-    <!--底部部分 各个页面通用*-->
-    <div class="footer">
-    </div>
+    <!--------------------------------------数据显示部分----------------------------------------------->
+    <!--#include file="foot.html"-->
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="js/jquery-1.9.1.min.js"></script>

@@ -19,6 +19,7 @@ namespace EmptyProjectNet45_FineUI.admin.file
         {
             if (!IsPostBack)
             {
+
                 // 父面板增加 5px 的内边距（显示表格的边框时，看起来比较美观）
                 (Master.FindControl("Panel1") as Panel).BodyPadding = "5px";
                 BindGrid();
@@ -171,8 +172,9 @@ namespace EmptyProjectNet45_FineUI.admin.file
         /// <returns></returns>
         public string GetEditUrl()
         {
-            object[] keys = Grid1.DataKeys[Grid1.SelectedRowIndex];
-            return String.Format("~/admin/file/fileDetail.aspx?id={0}&name={1}", keys[0], HttpUtility.UrlEncode(keys[1].ToString()));
+            //文件十分的简单null
+            Alert.ShowInTop("为节省服务器空间，请删除后重新添加！");
+            return "请删除后重新添加！";
         }
 
         #endregion

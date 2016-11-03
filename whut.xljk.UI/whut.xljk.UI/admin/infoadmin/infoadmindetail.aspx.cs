@@ -61,6 +61,7 @@ namespace EmptyProjectNet45_FineUI.admin.infoadmin
             if (bll.Update(model))
             {
                 Alert.ShowInTop("文章内容修改成功，请关闭窗口~");
+                PageContext.RegisterStartupScript(ActiveWindow.GetHideRefreshReference());
             }
             else
             {
