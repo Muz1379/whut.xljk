@@ -239,7 +239,7 @@ namespace whut.xljk.BLL
 
             for (int i = 0; i < sp.Length; i++)
             {
-                string downloadPath = "/ArticleUploadFile/";
+                string downloadPath = "admin/Article/ArticleUploadFile/";
                 FileTypeExt type = CheckFileExt(sp[i]);
                 switch (type)
                 {
