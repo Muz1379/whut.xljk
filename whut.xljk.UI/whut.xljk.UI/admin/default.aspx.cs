@@ -16,6 +16,7 @@ namespace EmptyProjectNet45_FineUI.admin
     {
         string xmlPath = "";
         public string username = "";
+        public string admin_category = "";
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -27,6 +28,23 @@ namespace EmptyProjectNet45_FineUI.admin
                 else
                 {
                     username = Session["admin_name"].ToString();
+                    switch(Convert.ToInt32(Session["admin_category"]))
+                    {
+                        case 0:
+                            admin_category = "系统管理员";
+                            break;
+                        case 1:
+                            admin_category = "超级管理员";
+                            break;
+                        case 2:
+                            admin_category = "问答管理员";
+                            break;
+                        case 3:
+                            admin_category = "助理";
+                            break;
+
+                    }
+                    
                     int admincategory = Convert.ToInt32(Session["admin_category"]);
 
                     //绑定不同的权限菜单

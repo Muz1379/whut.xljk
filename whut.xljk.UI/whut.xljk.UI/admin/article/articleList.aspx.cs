@@ -48,32 +48,31 @@ namespace EmptyProjectNet45_FineUI.admin.article
         /// <param name="e"></param>
         protected void Grid1_RowDataBound(object sender, GridRowEventArgs e)
         {
-            //System.Web.UI.WebControls.Label news_state = (System.Web.UI.WebControls.Label)Grid1.Rows[e.RowIndex].FindControl("news_state");
+            System.Web.UI.WebControls.Label news_state = (System.Web.UI.WebControls.Label)Grid1.Rows[e.RowIndex].FindControl("news_state");
 
-            ////List<string> news_statelist = new List<string>();
-            ////news_statelist.Add("头条新闻");
-            ////news_statelist.Add("强调新闻");
-            ////news_statelist.Add("普通新闻");
-            ////news_state.DataSource = news_statelist;
-            ////news_state.DataBind();
+            DataRowView row = e.DataItem as DataRowView;
+            int state = Convert.ToInt32(row["C_ArticleCategory"]);
 
-
-            //DataRowView row = e.DataItem as DataRowView;
-
-            //int state = Convert.ToInt32(row["news_state"]);
-            //if (state == 1)
-            //{
-            //    news_state.Text = "头条新闻";
-            //}
-            //else if (state == 2)
-            //{
-            //    news_state.Text = "强调新闻";
-            //}
-            //else
-            //{
-            //    news_state.Text = "普通新闻";
-            //}
-
+            switch(state)
+            {
+                case 1:
+                    news_state.Text = "中心概况";
+                    break;
+                case 2:
+                    news_state.Text = "中心动态";
+                    break;
+                case 3:
+                    news_state.Text = "心协动态";
+                    break;
+                case 4:
+                    news_state.Text = "咨询师简介";
+                    break;
+                case 5:
+                    news_state.Text = "心灵驿站";
+                    break;
+                default:
+                    break;
+            }
         }
 
         /// <summary>
@@ -83,8 +82,8 @@ namespace EmptyProjectNet45_FineUI.admin.article
         private int GetTotalCount()
         {
             whut.xljk.BLL.ArticleBLL bll = new whut.xljk.BLL.ArticleBLL();
-            bll.GetAllList();
-            return bll.GetAllList().Tables[0].Rows.Count;
+            bll.GetAllList("");
+            return bll.GetAllList("").Tables[0].Rows.Count;
 
         }
 
@@ -101,7 +100,7 @@ namespace EmptyProjectNet45_FineUI.admin.article
             string sortField = Grid1.SortField;
             string sortDirection = Grid1.SortDirection;
 
-            DataTable table2 = bll.GetAllList().Tables[0];
+            DataTable table2 = bll.GetAllList("").Tables[0];
 
             DataView view2 = table2.DefaultView;
             view2.Sort = String.Format("{0} {1}", sortField, sortDirection);
@@ -140,7 +139,7 @@ namespace EmptyProjectNet45_FineUI.admin.article
             {
                 object[] keys = Grid1.DataKeys[n];
                 String id = keys[0].ToString();
-                if(id=="0001")
+                if (id == "0001")
                 {
                     Alert.ShowInTop("中心概况的新闻不允许删除！");
                 }
@@ -302,24 +301,62 @@ namespace EmptyProjectNet45_FineUI.admin.article
 
         #endregion
 
-        protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
+
+
+        protected void dropdownlist1_SelectedIndexChanged1(object sender, EventArgs e)
         {
+            int category =Convert.ToInt32(dropdownlist1.SelectedValue);
+            if (category == 6)
+            {
+                BindGrid();
+            }
+            else
+            {
+                //输出指定类型的新闻内容
+                // 2.获取当前分页数据
+                DataTable table = GetPagedDataTableByCategory(category);
+                // 3.绑定到Grid
+                Grid1.DataSource = table;
+                Grid1.DataBind();
+            }
 
         }
 
-        //protected void ttbSearch_Trigger1Click(object sender, EventArgs e)
-        //{
-        //    ttbSearch.Text = String.Empty;
-        //    ttbSearch.ShowTrigger1 = false;
+        private DataTable GetPagedDataTableByCategory(int category)
+        {
+            whut.xljk.BLL.ArticleBLL bll = new whut.xljk.BLL.ArticleBLL();
+            int pageIndex = Grid1.PageIndex;
+            int pageSize = Grid1.PageSize;
 
-        //    Alert.ShowInTop("尚未实现！");
-        //}
+            string sortField = Grid1.SortField;
+            string sortDirection = Grid1.SortDirection;
 
-        //protected void ttbSearch_Trigger2Click(object sender, EventArgs e)
-        //{
-        //    ttbSearch.ShowTrigger1 = true;
+            DataTable table2 = bll.GetAllList("C_ArticleCategory =" + category).Tables[0];
+            // 1.设置总项数（特别注意：数据库分页一定要设置总记录数RecordCount）
+            Grid1.RecordCount = table2.Rows.Count;
 
-        //    Alert.ShowInTop("尚未实现！");
-        //}
+            DataView view2 = table2.DefaultView;
+            view2.Sort = String.Format("{0} {1}", sortField, sortDirection);
+
+            DataTable table = view2.ToTable();
+
+            DataTable paged = table.Clone();
+
+            int rowbegin = pageIndex * pageSize;
+            int rowend = (pageIndex + 1) * pageSize;
+            if (rowend > table.Rows.Count)
+            {
+                rowend = table.Rows.Count;
+            }
+
+            for (int i = rowbegin; i < rowend; i++)
+            {
+                paged.ImportRow(table.Rows[i]);
+            }
+
+            return paged;
+        }
+
+
     }
 }

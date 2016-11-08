@@ -49,7 +49,7 @@ namespace EmptyProjectNet45_FineUI.admin.infoadmin
         /// <returns></returns>
         private int GetTotalCount()
         {
-            whut.xljk.BLL.ArticleBLL bll = new whut.xljk.BLL.ArticleBLL();
+            whut.xljk.BLL.infoadminBLL bll = new whut.xljk.BLL.infoadminBLL();
             bll.GetAllList();
             return bll.GetAllList().Tables[0].Rows.Count;
 

@@ -29,28 +29,18 @@
         AllowSorting="true" SortField="C_InfoAdminName" SortDirection="ASC">
         <Columns>
             <f:RowNumberField />
-             
             <f:BoundField DataField="C_InfoAdminName" Width="100px" SortField="C_ArticleContent" DataFormatString="{0}"
                 HeaderText="真实姓名" />
-            
             <f:BoundField DataField="C_InfoAdminAccount" Width="100px" SortField="C_ArticleTitle" DataFormatString="{0}"
                 HeaderText="账号名称" />
-
             <f:BoundField DataField="C_InfoAdminTel" Width="100px" SortField="C_ArticleAnnexAddr" DataFormatString="{0}"
                 HeaderText="账户电话" />
-
-
             <f:BoundField DataField="C_InfoAdminEmail" Width="100px" SortField="C_ArticleTime" DataFormatString="{0}"
                 HeaderText="账号邮箱" />
-
-
             <f:BoundField DataField="C_InfoAdminPwd" Width="100px" SortField="C_ArticleTitle" DataFormatString="{0}"
                 HeaderText="账号密码" />
-
             <f:BoundField DataField="C_InfoAdminCategory" Width="100px" SortField="C_ArticlePostStaff" DataFormatString="{0}"
                 HeaderText="账号类别" />
-
-
         </Columns>
         <Toolbars>
             <f:Toolbar ID="Toolbar1" runat="server">

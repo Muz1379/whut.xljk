@@ -29,9 +29,9 @@ namespace whut.xljk.BLL
         /// <summary>
         /// 获得数据列表
         /// </summary>
-        public DataSet GetAllList()
+        public DataSet GetAllList(string where)
         {
-            return dal.GetList("");
+            return dal.GetList(where);
         }
 
         /// <summary>
