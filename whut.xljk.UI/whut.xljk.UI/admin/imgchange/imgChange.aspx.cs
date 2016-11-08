@@ -34,7 +34,7 @@ namespace EmptyProjectNet45_FineUI.admin.imgchange
             FileUpload1.SaveAs(Request.MapPath(path));
             Response.Write("修改成功，请关闭此窗口~");
 
-            PageContext.RegisterStartupScript(ActiveWindow.GetHideRefreshReference());
+            //PageContext.RegisterStartupScript(ActiveWindow.GetHideRefreshReference());
         }
         public bool ChangeImagePath(int chooseImg, string des, string url)
         {
