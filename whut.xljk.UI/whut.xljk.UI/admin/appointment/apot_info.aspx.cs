@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace EmptyProjectNet45_FineUI.admin.appointment
 {
-    public partial class change_state : System.Web.UI.Page
+    public partial class apot_info : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
