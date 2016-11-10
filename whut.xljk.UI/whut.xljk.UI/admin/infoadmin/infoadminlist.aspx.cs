@@ -49,7 +49,7 @@ namespace EmptyProjectNet45_FineUI.admin.infoadmin
         /// <returns></returns>
         private int GetTotalCount()
         {
-            whut.xljk.BLL.ArticleBLL bll = new whut.xljk.BLL.ArticleBLL();
+            whut.xljk.BLL.infoadminBLL bll = new whut.xljk.BLL.infoadminBLL();
             bll.GetAllList();
             return bll.GetAllList().Tables[0].Rows.Count;
 
@@ -264,19 +264,19 @@ namespace EmptyProjectNet45_FineUI.admin.infoadmin
 
         }
 
-        protected void ttbSearch_Trigger1Click(object sender, EventArgs e)
-        {
-            ttbSearch.Text = String.Empty;
-            ttbSearch.ShowTrigger1 = false;
+        //protected void ttbSearch_Trigger1Click(object sender, EventArgs e)
+        //{
+        //    ttbSearch.Text = String.Empty;
+        //    ttbSearch.ShowTrigger1 = false;
 
-            Alert.ShowInTop("尚未实现！");
-        }
+        //    Alert.ShowInTop("尚未实现！");
+        //}
 
-        protected void ttbSearch_Trigger2Click(object sender, EventArgs e)
-        {
-            ttbSearch.ShowTrigger1 = true;
+        //protected void ttbSearch_Trigger2Click(object sender, EventArgs e)
+        //{
+        //    ttbSearch.ShowTrigger1 = true;
 
-            Alert.ShowInTop("尚未实现！");
-        }
+        //    Alert.ShowInTop("尚未实现！");
+        //}
     }
 }

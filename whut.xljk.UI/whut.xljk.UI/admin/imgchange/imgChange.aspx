@@ -1,5 +1,4 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="imgChange.aspx.cs" Inherits="EmptyProjectNet45_FineUI.admin.imgchange.imgChange" %>
-
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">

@@ -7,7 +7,7 @@
     <f:Form ID="Form6" ShowBorder="false" ShowHeader="false" runat="server">
         <Rows>
 
-            <f:FormRow>
+<%--            <f:FormRow>
                 <Items>
                     <f:TwinTriggerBox runat="server" EmptyText="在用户名中搜索" ShowLabel="false" ID="ttbSearch"
                         ShowTrigger1="false" OnTrigger1Click="ttbSearch_Trigger1Click" OnTrigger2Click="ttbSearch_Trigger2Click"
@@ -20,7 +20,7 @@
                         <f:ListItem Text="过滤条件三" Value="filter3" />
                     </f:DropDownList>
                 </Items>
-            </f:FormRow>
+            </f:FormRow>--%>
         </Rows>
     </f:Form>
     <f:Grid ID="Grid1" EnableCollapse="false" PageSize="5" ShowBorder="true" ShowHeader="false"

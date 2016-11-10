@@ -42,10 +42,10 @@
                 <f:FormRow ID="FormRow4">
                     <Items>
                         <f:DropDownList ID="DropDownList1" runat="server" Label="类别">
-                            <f:ListItem Value="0" Text="超级管理员"></f:ListItem>
-                            <f:ListItem Value="1" Text="新闻管理员"></f:ListItem>
-                            <f:ListItem Value="2" Text="留言管理员"></f:ListItem>
-                            <f:ListItem Value="3" Text="预约管理员"></f:ListItem>
+                            <f:ListItem Value="0" Text="系统管理员"></f:ListItem>
+                            <f:ListItem Value="1" Text="超级管理员"></f:ListItem>
+                            <f:ListItem Value="2" Text="问答管理员"></f:ListItem>
+                            <f:ListItem Value="3" Text="助理"></f:ListItem>
                         </f:DropDownList>
                     </Items>
                 </f:FormRow>

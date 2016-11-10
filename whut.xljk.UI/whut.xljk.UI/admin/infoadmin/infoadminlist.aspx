@@ -6,7 +6,7 @@
     <f:Form ID="Form6" ShowBorder="false" ShowHeader="false" runat="server">
         <Rows>
 
-            <f:FormRow>
+<%--            <f:FormRow>
                 <Items>
                     <f:TwinTriggerBox runat="server" EmptyText="在用户名中搜索" ShowLabel="false" ID="ttbSearch"
                         ShowTrigger1="false" OnTrigger1Click="ttbSearch_Trigger1Click" OnTrigger2Click="ttbSearch_Trigger2Click"
@@ -19,7 +19,7 @@
                         <f:ListItem Text="过滤条件三" Value="filter3" />
                     </f:DropDownList>
                 </Items>
-            </f:FormRow>
+            </f:FormRow>--%>
         </Rows>
     </f:Form>
     <f:Grid ID="Grid1" EnableCollapse="false" PageSize="5" ShowBorder="true" ShowHeader="false"
@@ -29,28 +29,18 @@
         AllowSorting="true" SortField="C_InfoAdminName" SortDirection="ASC">
         <Columns>
             <f:RowNumberField />
-             
             <f:BoundField DataField="C_InfoAdminName" Width="100px" SortField="C_ArticleContent" DataFormatString="{0}"
                 HeaderText="真实姓名" />
-            
             <f:BoundField DataField="C_InfoAdminAccount" Width="100px" SortField="C_ArticleTitle" DataFormatString="{0}"
                 HeaderText="账号名称" />
-
             <f:BoundField DataField="C_InfoAdminTel" Width="100px" SortField="C_ArticleAnnexAddr" DataFormatString="{0}"
                 HeaderText="账户电话" />
-
-
             <f:BoundField DataField="C_InfoAdminEmail" Width="100px" SortField="C_ArticleTime" DataFormatString="{0}"
                 HeaderText="账号邮箱" />
-
-
             <f:BoundField DataField="C_InfoAdminPwd" Width="100px" SortField="C_ArticleTitle" DataFormatString="{0}"
                 HeaderText="账号密码" />
-
             <f:BoundField DataField="C_InfoAdminCategory" Width="100px" SortField="C_ArticlePostStaff" DataFormatString="{0}"
                 HeaderText="账号类别" />
-
-
         </Columns>
         <Toolbars>
             <f:Toolbar ID="Toolbar1" runat="server">

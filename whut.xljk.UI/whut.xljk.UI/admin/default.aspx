@@ -125,7 +125,7 @@
                             <table class="bottomtable">
                                 <tr>
                                     <td style="width: 300px;">&nbsp;当前用户：
-                                        &nbsp;&nbsp;<%= username %></td>
+                                        &nbsp;&nbsp;<%= username %>，角色类型：<%= admin_category %></td>
                                     <td style="text-align: center;">Copyright &copy; 武汉理工大学信息管理协会 </td>
                                     <td style="width: 300px; text-align: right;">&nbsp;   
                                         <f:Button ID="btnServerClick" Text="注销" OnClick="btnServerClick_Click" runat="server">
