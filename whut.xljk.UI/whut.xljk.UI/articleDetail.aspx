@@ -19,12 +19,12 @@
         <div class="content" id="content" style="width: 74vw;">
             <!--内容-->
             <div class="content_nav">
-                <span class="here">当前位置:</span>
-                <a href="index.aspx"><span style="font-size:16px;">首页</span></a>
-                <span>></span>
-                <a href="articleList.aspx?articleCategory=<%=model.ArticleCategory%>"><span style="font-size:16px;">新闻列表</span></a>
-                <span>></span>
-                <span>正文</span>
+                <span class="here" style="font-size:1.5vw;">当前位置:</span>
+                <a href="index.aspx"><span style="font-size:1.5vw;">首页</span></a>
+                <span style="font-size:1.5vw;">></span>
+                <a href="articleList.aspx?articleCategory=<%=model.ArticleCategory%>"><span style="font-size:1.5vw;">新闻列表</span></a>
+                <span style="font-size:1.5vw;">></span>
+                <span style="font-size:1.5vw;">正文</span>
             </div>
             <hr />
             <!--动态标题，需要更换-->
