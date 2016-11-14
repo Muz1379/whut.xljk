@@ -15,13 +15,13 @@
 
     <!--#include file="head.html"-->
     
-    <div style="height:1000px;">
+    <div >
     <form class="form-horizontal" role="form" runat="server">
         <!--首页主体部分 首页编码为p0-->
         <div class="main">
             <div class="p5_main">
                 <img src="images/qaonline_icon.png" style="width: 9.5vw; height: auto;">
-                <hr>
+                <hr style="margin:1vw auto 1vw;">
                 <center><h1>在线咨询</h1></center>
                 <p>
                     同学你好，这里是武汉理工大学心理健康教育中心的在线问答版块<br>
@@ -146,7 +146,7 @@
                 </div>
                 <%=MessageList %>
                 <!--页面切换-->
-                <div><%=NavHtml %></div>
+                <div style="font-size:1.2vw;"><%=NavHtml %></div>
                 <!--页面切换-->
             </div>
 

@@ -19,10 +19,10 @@
         <div class="content" id="content" style="width: 74vw;">
             <!--内容-->
             <div class="content_nav">
-                <span class="here">当前位置:</span>
-                <a href="index.aspx" style="font-size:16px"><span>首页</span></a>
-                <span>></span>
-                <span>下载中心</span>
+                <span class="here" style="font-size:1.2vw;font-family:'微软雅黑Light'">当前位置:</span>
+                <a href="index.aspx" ><span style="font-size:1.2vw;font-family:'微软雅黑Light'">首页</span></a>
+                <span style="font-size:1.2vw;font-family:'微软雅黑Light'">></span>
+                <span style="font-size:1.2vw;font-family:'微软雅黑Light'">下载中心</span>
             </div>
             <hr />
             <!--动态标题，需要更换-->
