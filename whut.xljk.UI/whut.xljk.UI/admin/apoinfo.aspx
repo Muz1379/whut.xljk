@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="apot_info.aspx.cs" Inherits="EmptyProjectNet45_FineUI.admin.appointment.apot_info" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="apoinfo.aspx.cs" Inherits="EmptyProjectNet45_FineUI.admin.apoinfo" %>
 
 <!DOCTYPE html>
 

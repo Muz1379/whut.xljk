@@ -54,7 +54,7 @@
     <Reference Include="LitJson">
       <HintPath>..\packages\LitJson.0.7.0\lib\LitJson.dll</HintPath>
     </Reference>
-    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\Newtonsoft.Json.dll</HintPath>
     </Reference>
@@ -75,8 +75,7 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="admin\appointment\apot_info.aspx" />
-    <Content Include="admin\appointment\apo_info.aspx" />
+    <Content Include="admin\appointment\apoinfo.aspx" />
     <Content Include="admin\appointment\schedule.aspx" />
     <Content Include="admin\article\articleAdd.aspx" />
     <Content Include="admin\article\articleDetail.aspx" />
@@ -4524,19 +4523,12 @@
     <Content Include="Scripts\jquery-1.9.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="admin\appointment\apot_info.aspx.cs">
-      <DependentUpon>apot_info.aspx</DependentUpon>
+    <Compile Include="admin\appointment\apoinfo.aspx.cs">
+      <DependentUpon>apoinfo.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="admin\appointment\apot_info.aspx.designer.cs">
-      <DependentUpon>apot_info.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="admin\appointment\apo_info.aspx.cs">
-      <DependentUpon>apo_info.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="admin\appointment\apo_info.aspx.designer.cs">
-      <DependentUpon>apo_info.aspx</DependentUpon>
+    <Compile Include="admin\appointment\apoinfo.aspx.designer.cs">
+      <DependentUpon>apoinfo.aspx</DependentUpon>
     </Compile>
     <Compile Include="admin\appointment\schedule.aspx.cs">
       <DependentUpon>schedule.aspx</DependentUpon>

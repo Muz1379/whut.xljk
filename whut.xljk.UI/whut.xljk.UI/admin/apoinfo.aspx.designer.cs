@@ -7,11 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace EmptyProjectNet45_FineUI.admin.appointment
+namespace EmptyProjectNet45_FineUI.admin
 {
 
 
-    public partial class apot_info
+    public partial class apoinfo
     {
 
         /// <summary>

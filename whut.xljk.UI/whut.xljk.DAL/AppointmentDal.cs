@@ -12,6 +12,7 @@ namespace whut.xljk.DAL
 {
     public class AppointmentDal
     {
+        //学生板块
         public DataTable Getlist(string para)
         {
             StringBuilder sb=new StringBuilder();
@@ -33,6 +34,14 @@ namespace whut.xljk.DAL
                                      new SqlParameter("@state",tdinfo.state)
                                  };
             return SqlHelper.ExecuteNonQuery(sb.ToString(), CommandType.Text, paras);
+        }
+        //管理员板块
+        public DataTable GetData(string id)
+        {
+            StringBuilder sb=new StringBuilder();
+            sb.Append("select * from T_apoinfo");
+            SqlParameter[] paras={};
+            return SqlHelper.ExecuteDataTable(sb.ToString(), CommandType.Text, paras);
         }
     }
 }
