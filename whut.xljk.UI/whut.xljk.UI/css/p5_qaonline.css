@@ -1,7 +1,7 @@
-@charset "utf-8";
+﻿@charset "utf-8";
 /* CSS Document */
 .p5_main{
-	width:55vw;
+	width:58vw;
 	float:left;
 	background-color:rgba(255,255,255,0.3);
 	padding:1.2vw 1.5vw;
@@ -37,28 +37,23 @@
 	color:white;
 	background:#3cc996;
 	width:50vw;
+    height:2.2vw;
 	margin-left:2vw;
 	padding:0.3vw 0vw;
 	margin-top:1vw;
-	font:1vw;
+	font-size:1.2vw;
+    border-radius:0.1vw;
+    border:0.01vw;
 	}
 
-.iwantq{
-	color:white;
-	background:#3cc996;
-	width:50vw;
-	margin-left:2vw;
-	padding:0.3vw 0vw;
-	margin-top:1vw;
-	font:1vw;
-	}
 
 .tags{
-	position:relative;
+	
 	width:48vw;
 	margin-left:4vw;
 	height:10vw;
 	margin-top:1vw;
+    margin-bottom:2vw;
 	}
 .tags img{width:auto;height:1.8vw;}
 .tags_1{position:relative;top:2vw;left:3vw;}
@@ -71,7 +66,7 @@
 .tags_8{position:relative;top:8vw;}
 .tags_9{position:relative;top:4.8vw;}
 .tags_10{position:relative;top:-1.6vw;left:15vw;}
-.qacontent{margin-top:2vw;}
+.qacontent{margin-top:2vw;clear:both;}
 .contentleft{
 	float:left;
 	}
