@@ -49,6 +49,7 @@
     <Compile Include="T_ImgChange.cs" />
     <Compile Include="T_InfoAdmin.cs" />
     <Compile Include="T_Message.cs" />
+    <Compile Include="T_stuinfo.cs" />
     <Compile Include="T_User.cs" />
     <Compile Include="T_Article.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

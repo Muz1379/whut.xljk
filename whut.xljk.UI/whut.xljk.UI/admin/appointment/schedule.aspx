@@ -52,10 +52,10 @@
                             <Items>
                                 <f:Panel ID="Panel4" Layout="HBox" BoxConfigAlign="Stretch" CssClass="formitem" ShowHeader="false" ShowBorder="false" runat="server">
                                     <Items>
-                                        <f:TextBox ID="teacher" Label="值班老师"  BoxFlex="1" Required="true"  LabelWidth="40px" ShowRedStar="true" runat="server">
+                                        <f:TextBox ID="teacher" Label="值班老师"  BoxFlex="1" Required="true"  LabelWidth="60px" ShowRedStar="true" runat="server">
                                         </f:TextBox>
                                         <f:Label runat="server"></f:Label>
-                                        <f:TextBox ID="work_time" Label="值班时间" BoxFlex="1" Width="50px" LabelWidth="40px"  ShowRedStar="true" runat="server">
+                                        <f:TextBox ID="work_time" Label="值班时间" BoxFlex="1" Width="50px" LabelWidth="60px"  ShowRedStar="true" runat="server">
                                         </f:TextBox>
                                         <f:Label runat="server" BoxFlex="1"></f:Label>
                                     </Items>

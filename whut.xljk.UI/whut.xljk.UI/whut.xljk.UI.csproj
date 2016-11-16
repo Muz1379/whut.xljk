@@ -75,6 +75,7 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="admin\appointment\addinfo.aspx" />
     <Content Include="admin\appointment\apoinfo.aspx" />
     <Content Include="admin\appointment\schedule.aspx" />
     <Content Include="admin\article\articleAdd.aspx" />
@@ -4523,6 +4524,13 @@
     <Content Include="Scripts\jquery-1.9.1.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="admin\appointment\addinfo.aspx.cs">
+      <DependentUpon>addinfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\appointment\addinfo.aspx.designer.cs">
+      <DependentUpon>addinfo.aspx</DependentUpon>
+    </Compile>
     <Compile Include="admin\appointment\apoinfo.aspx.cs">
       <DependentUpon>apoinfo.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

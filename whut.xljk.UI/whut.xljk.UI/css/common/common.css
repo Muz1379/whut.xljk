@@ -1,17 +1,17 @@
 ﻿@charset "utf-8";
 
 a:link { 
-font-size: 14px; 
+font-size: 0.84vw; 
 color: #000000; 
 text-decoration: none; 
 } 
 a:visited { 
-font-size: 14px; 
+font-size: 0.84vw; 
 color: #000000; 
 text-decoration: none; 
 } 
 a:hover { 
-font-size: 14px; 
+font-size:0.84vw; 
 color: #999999; 
 } 
 
@@ -40,8 +40,6 @@ body{
 .main{
 	width:80%;
 	margin:0 auto;
-    overflow:hidden;
-    zoom:1;
 	}
 
 /*1.header部分*/
@@ -60,19 +58,6 @@ body{
 .header .icon{
 	margin-left:3vw;
 	}
-/*搜索框*/
-.search{
-	float:right;
-	margin-top:1.2vw;
-	margin-right:3vw;
-	}
-.search img{
-	margin-left:-1.1vw;
-	height:1.8vw;
-	width:auto;
-	position:relative;
-	}
-.searchicon{left:-1vw;}
 /*header部分*/
 
 /*2.nav部分*/
@@ -82,10 +67,7 @@ body{
 	background-color:rgba(0,0,0,0.5);
 	margin-bottom:1.5vw;/*导航条与下面的内容有1.5vw的距离*/
 	}
-.nav ul{
-	width:99%;
-	margin:0 auto;/*是导航栏居中？*/
-	}
+
 .nav ul li{
 	margin-left:2.5vw;
 	float:left;
@@ -130,23 +112,38 @@ body{
 /*三个按钮*/
 
 
+/*底部*/
+#footer{width:100%;
+        height:10vw; 
+       margin-top:2vw;
+       background-color: rgba(181, 245, 182,1);
+       z-index:99;
+       overflow:hidden;
+}
+.foot_main{height:9vw;
+           width:80vw;
+            margin:0 auto; }
 
-#footer{width:100%; height:150px; margin-top:40px;background-color: rgba(181, 245, 182, 0.30);}
+.foot_one ul {margin-left:21vw;
+}
+.foot_one ul li{float:left; 
+                list-style:none; 
+                width:8vw; 
+                height:1.8vw; 
+                color:#666; 
+                font-size:1vw; 
+                font-weight:bolder;
+                 margin-top:2vw;
 
-.foot_main, .foot_one, .foot_two{width:990px;}
+}
+.foot_one ul li a{ color:#666; 
+                   text-decoration:none;
 
-.foot_main{height:150px; margin:0 auto; }
-
-.foot_one{margin-left:284px;}
-
-.foot_one ul li{float:left; list-style:none; width:90px; height:30px; color:#666; font-size:16px; font-weight:bolder; margin-top:28px;}
-
-.foot_one ul li a{ color:#666; text-decoration:none;}
-
+}
 .foot_one ul li a:hover{color:#567fe6; text-decoration:underline;}
 
-.foot_one ul li span{padding-left:15px;}
+.foot_one ul li span{padding-left:1vw;}
 
-.foot_two{float:left; margin-top:30px; }
+.foot_two{float:left; margin-top:1.5vw; margin-left:12vw;}
 
-.foot_two p{font-size:14px; color:#666; text-align:center;}
+.foot_two p{font-size:1vw; color:#666; text-align:center;}

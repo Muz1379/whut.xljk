@@ -24,6 +24,31 @@
             alert("你使用的是IE7浏览器，这是IE的过期版本，是时候该升级了！");
         </script>
         <![endif]-->
+    <style type="text/css">
+        .button{
+	width:24vw;
+	height:23vw;
+	float:right;
+	background-color:rgba(225,225,225,0.2);
+	border-radius:0.3vw;
+	box-shadow:0vw 0vw 0.06vw 0vw #838383;
+	}
+.button img{
+	width:16.5vw;
+	height:auto;
+	margin:3vw auto;
+	display:block;
+	}
+ .carousel-indicators li {
+     width:0.8vw;
+     height:0.8vw;
+     margin:0.06vw;
+        }
+        .carousel-indicators .active {
+        width:1vw;
+        height:1vw;
+        }
+    </style>
 </head>
 
 <body style="background-image: url(images/background.png);">
@@ -33,23 +58,16 @@
     <!--------------------------------------数据显示部分----------------------------------------------->
 
     <div class="main" style="height:auto">
-
-        <!--首页轮播图-->
-        <div id="banner_tabs" class="flexslider">
-
-            <div class="block-wrapper2 container-fuild">
-
                 <!--轮播图-->
                 <div id="carousel-example-generic" class="carousel slide zxzl-carousel" data-ride="carousel">
-                    <div class="carousel-indicators-warrper"></div>
                     <!-- Indicators -->
+                    <div class="carousel-indicators-warrper"></div>
                     <ol class="carousel-indicators">
-                        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-                        <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+                        <li  data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                        <li  data-target="#carousel-example-generic" data-slide-to="1"></li>
+                        <li  data-target="#carousel-example-generic" data-slide-to="2"></li>
+                        <li  data-target="#carousel-example-generic" data-slide-to="3"></li>
                     </ol>
-
                     <!-- Wrapper for slides -->
                     <div class="carousel-inner" role="listbox">
                         <%=PreImg %>
@@ -58,8 +76,6 @@
                     <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev"></a>
                     <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next"></a>
                 </div>
-            </div>
-        </div>
 
             <!--首页轮播图右侧的三个按钮 各个页面通用-->
     <!--#include file="imghref.html"-->
@@ -67,7 +83,7 @@
         <!--中心动态 2-->
         <div class="p0_news">
             <img src="images/xinwenIcon.png" class="newstittle" style="width: 9.5vw; height: auto">
-            <hr style="border: 0.03vw solid gray;">
+            <hr style="border: 0.03vw solid gray;margin-top:1.2vw;margin-bottom:1.2vw;">
             <img src="images/centermain.png" style="display: block; width: 4vw;">
 
             <div class="newsleft">
@@ -96,7 +112,7 @@
         <div class="p0_qa">
             <!--首页问答-->
             <img src="images/wendaIcon.png" style="width: 9.5vw; height: auto">
-            <hr>
+            <hr style="margin-top:1.3vw;margin-bottom:1.2vw;border-top: 0.06vw solid gray;">
             <p>
                 <img src="images/wen.png">&nbsp;好方啊，大学好迷茫。。
            
@@ -115,8 +131,8 @@
 
         <!--心理美文 5-->
         <div class="p0_essay">
-            <img src="images/xinliIcon.png" style="width: 9.5vw; height: auto">
-            <hr style="margin-bottom: 1vw; border: 0.03vw solid gray;">
+            <img src="images/xinliIcon.png" style="width: 9.5vw; height: auto;margin:2vw 0vw 0vw 2vw;">
+            <hr style="margin:1vw auto 2vw; border: 0.03vw solid gray;width:74vw;">
 
             <div class="grid">
                 <%=preMeiwen %>

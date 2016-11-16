@@ -46,11 +46,11 @@ namespace EmptyProjectNet45_FineUI
                 if (i == 1)
                 {
                     //获得图片信息的位置
-                    sb.AppendFormat("<div class='item active'><div class='carousel-title'>{2}</div><a href='" + @"http://" + "{1}' target='_blank'><img src='images/banner/back{0}.jpg' width='990' height='340' alt='{1}' /></a></div>", i, model.C_ImgUrl, model.C_ImgDes);
+                    sb.AppendFormat("<div class='item active'><div class='carousel-title'>{2}</div><a href='" + @"http://" + "{1}' target='_blank'><img src='images/banner/back{0}.jpg'  alt='{1}' /></a></div>", i, model.C_ImgUrl, model.C_ImgDes);
                 }
                 else
                 {
-                    sb.AppendFormat("<div class='item'><div class='carousel-title'>{2}</div><a href='" + @"http://" + "{1}' target='_blank'><img src='images/banner/back{0}.jpg' width='990' height='340' alt='{1}' /></a></div>", i, model.C_ImgUrl, model.C_ImgDes);
+                    sb.AppendFormat("<div class='item'><div class='carousel-title'>{2}</div><a href='" + @"http://" + "{1}' target='_blank'><img src='images/banner/back{0}.jpg'  alt='{1}' /></a></div>", i, model.C_ImgUrl, model.C_ImgDes);
 
                 }
                 i++;
@@ -89,7 +89,7 @@ namespace EmptyProjectNet45_FineUI
                 }
                 else
                 {
-                    sb.AppendFormat("<a href='articleDetail.aspx?articleId={0}'> <p class='nrtitle'>{1}</p></a><p class='nrtxt' style='font-size:14px;'>{2}</p>", model.ArticleId, model.ArticleTitle,ab);
+                    sb.AppendFormat("<a href='articleDetail.aspx?articleId={0}'> <p class='nrtitle'>{1}</p></a><p class='nrtxt' style='font-size:0.84vw;'>{2}</p>", model.ArticleId, model.ArticleTitle,ab);
                 }
                 i++;
             }

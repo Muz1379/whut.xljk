@@ -62,9 +62,18 @@ namespace whut.xljk.BLL
             return ADal.updateTdInfo(td);
         }
         //管理员板块
-        public DataTable GetData(string id)
+        public DataTable GetData(string para)
         {
             return ADal.GetData("");
+        }
+        public int insert_apoinfo(T_stuinfo ts)
+        {
+            return ADal.insert_apoinfo(ts);
+        }
+
+        public int delectData(string name, string phone)
+        {
+            return ADal.delectData(name, phone);
         }
     }
 }

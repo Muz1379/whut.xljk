@@ -12,7 +12,7 @@
   </TreeNode>
   <TreeNode Text="咨询预约管理" Expanded="true">
     <TreeNode Text="修改值班表" NavigateUrl="~/admin/appointment/schedule.aspx"></TreeNode>
-    <TreeNode Text="预约审核状态" NavigateUrl="~/admin/appointment/change_state.aspx"></TreeNode>
+    <TreeNode Text="已预约数据" NavigateUrl="~/admin/appointment/apoinfo.aspx"></TreeNode>
   </TreeNode>
 </Tree>
 
