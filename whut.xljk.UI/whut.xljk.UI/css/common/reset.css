@@ -1,4 +1,4 @@
-@charset "utf-8";
+﻿@charset "utf-8";
 /* CSS Document */
 	html, body, div, span, applet, object, iframe,
 	h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -16,7 +16,7 @@
 	    font-style: inherit;
 	    font-size: 100%;
 	    font-family: inherit;
-	    vertical-align: baseline;
+        vertical-align:central;
 	}
 	:focus {
 	    outline: 0;

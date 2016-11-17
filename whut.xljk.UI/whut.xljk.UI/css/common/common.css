@@ -38,7 +38,7 @@ body{
 	
 /* 主体 */
 .main{
-	width:80%;
+	width:78%;
 	margin:0 auto;
 	}
 
@@ -46,11 +46,11 @@ body{
 /*logo*/	
 .header{
 	width:100%;
-	height:9.6vw;
+	height:7.6vw;
 	}
 .header img{
-	margin-top:2.5vw;
-	height:5.5vw;
+	margin-top:1.6vw;
+	height:4.5vw;
 	width:auto;
 	margin-left:3vw;
 	cursor:pointer; 
@@ -63,30 +63,33 @@ body{
 /*2.nav部分*/
 .nav{
 	width:100%;
-	height:4vw;
+	height:3vw;
 	background-color:rgba(0,0,0,0.5);
-	margin-bottom:1.5vw;/*导航条与下面的内容有1.5vw的距离*/
+	margin-bottom:1vw;/*导航条与下面的内容有1.5vw的距离*/
 	}
 
 .nav ul li{
-	margin-left:2.5vw;
+	margin-left:2.7vw;
 	float:left;
     }	
-.nav img{
+.nav ul li img{
 	width:1.6vw;
 	height:1.6vw;
-	margin-bottom:-0.3vw;
-	margin-right:0.3vw;
+	margin-right:0.5vw;
+    vertical-align:bottom;
+    margin-bottom:0.7vw;
+
 	}
 .nav a{
-	font-size:1.3vw;
+	font-size:1.2vw;
 	color:white;
 	font-family:'微软雅黑';
-    line-height:4vw;
 	letter-spacing:0.3vw;
+     vertical-align:bottom;
+     line-height:3vw;
 	}
 .nav ul li:hover{
-	margin-left:2.5vw;
+	margin-left:2.7vw;
 	float:left;
 	border-top:0.12vw solid white;
 	border-bottom:0.12vw solid white;
@@ -96,7 +99,7 @@ body{
 
 /* 主体部分三个按钮 各个页面通用 */
 .button{
-	width:20vw;
+	width:18.5vw;
 	height:20vw;
 	float:right;
 	background-color:rgba(225,225,225,0.2);
@@ -104,7 +107,7 @@ body{
 	box-shadow:0vw 0vw 0.06vw 0vw #838383;
 	}
 .button img{
-	width:16.5vw;
+	width:15.5vw;
 	height:auto;
 	margin:2.5vw auto;
 	display:block;
