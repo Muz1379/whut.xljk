@@ -12,6 +12,7 @@ namespace whut.xljk.BLL
     public class AppointmentBll
     {
         AppointmentDal ADal = new AppointmentDal();
+        //用户板块
         public List<Td> Getlist(List<Td> list)
         {
             for (int i = 0; i < 36; i++)
@@ -36,7 +37,6 @@ namespace whut.xljk.BLL
             }
             return list;
         }
-
         public Td GetTdinfo(string id)
         {
            DataTable dt= ADal.Getlist(id);
@@ -60,6 +60,20 @@ namespace whut.xljk.BLL
         public int updateTdInfo(Td td)
         {
             return ADal.updateTdInfo(td);
+        }
+        //管理员板块
+        public DataTable GetData(string para)
+        {
+            return ADal.GetData("");
+        }
+        public int insert_apoinfo(T_stuinfo ts)
+        {
+            return ADal.insert_apoinfo(ts);
+        }
+
+        public int delectData(string name, string phone)
+        {
+            return ADal.delectData(name, phone);
         }
     }
 }
