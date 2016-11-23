@@ -7,6 +7,29 @@
     float:left;
     height:22.7vw;
 }
+.carousel-indicators {
+    width:52vw;
+    background-color:black;
+    opacity:0.5;
+    height:2.5vw;
+    bottom:0vw;
+    left:15.6vw;
+}
+ .carousel-indicators li {
+    top:0.6vw;
+    position:relative;
+    left:13vw;
+
+    }
+#carousel_sub {
+    font-size:1.2vw;
+    color:white;
+    position:relative;
+    top:-2vw;
+    z-index:999;
+    left:2vw;
+    font-family:'微软雅黑Light';
+}
 .carousel-inner {
     position: relative;
     width: 100%;
@@ -35,9 +58,10 @@
 
 /* 新闻动态 */
 .p0_news{
-	margin-top:2vw;
+	margin-top:1vw;
+    margin-bottom:2vw;
 	width:52vw;
-	height:55vw;
+	height:60vw;
 	float:left;
 	background-color:rgba(255,255,255,0.3);
 	padding:0vw 1.81vw 1.2vw;
@@ -45,20 +69,20 @@
 	
 	}/* 总版块 */
 .newstittle{
-    margin-top:1.2vw;
-	width:9vw;
-	height:auto;
+    margin-top:0.8vw;
 	}
 .newsleft{
-	margin-top:1vw;
-	width:28vw;
+	margin-top:0.5vw;
+	width:23vw;
+    height:28vw;
 	float:left;
+    margin-bottom:1vw;
 	}/* 左侧 */
 
 .newsleft a{
     display: block;
     width: 100%;
-    height: 13.2vw;
+    height: 16vw;
     overflow: hidden;
 }/* 图片和文字 */
 
@@ -72,22 +96,34 @@
 .newsleft h3{
 	font-size:1.44vw;
 	font-family:"等线Light";
-	margin-top:0.6vw;}
+	margin-top:0.6vw;
+    width:20vw;
+    height:2vw;
+    overflow:hidden;
+}
 .newsleft p{
     font-size: 1vw;
     font-family: "等线Light";
     margin-top: 0.6vw;
     line-height: 1.5vw;
+    width:28vw;
+    height:8vw;
+    overflow:hidden;
 }	
 
 /* 右侧 */
 .newsright{
-	width:18vw;
+	width:23vw;
+    height:28vw;
 	float:right;	
 	}
 .nrtitle{
     font-size: 1.2vw;
     line-height: 2.2vw;
+    height:2vw;
+    width:13vw;
+    overflow:hidden;
+    font-family:'微软雅黑Light';
 	}
 .nrtxt{
     line-height: 2vw;
@@ -95,6 +131,9 @@
     margin-bottom: 0.6vw;
     padding-bottom: 0.6vw;
     border-bottom: 0.12vw solid #999;
+    width:23vw;
+    height:4vw;
+    overflow:hidden;
 }
 
 
@@ -102,14 +141,15 @@
 .xinxiecontent{
     margin-top: 0.6vw;
     width: 100%;
-    height: 15.6vw;
+    height: 20vw;
     overflow: hidden;
     padding-left: 1%;
 }
 
 .newsbottom{
 	float:left;
-    width: 33%;
+    width: 28%;
+    margin-left:1.8vw;
 	}
 
 .newsbottom .imglink{
@@ -122,19 +162,26 @@
 .newsbottom img{
     width: 100%;
     height:100%;
-    overflow: hidden;
+    
     }
 
 .newsbottom p{
-    font-size: 1.44vw;
+    font-size: 1.2vw;
     font-family: "等线Light";
     margin-top: 0.6vw;
 	}
 
+.newsbottom a {
+  height:9vw;
+  overflow:hidden;
+  font-size:1vw;
+  line-height:1.5vw;
+  width:13vw;
 
+}
 /* 问答案例 */		
 .p0_qa{
-	margin-top:3vw;
+	margin-top:1.6vw;
 	width:23.5vw;
 	height:55vw;
 	float:right;
@@ -154,18 +201,13 @@ height:auto;}
 /* 心理美文 */
 .p0_essay{
 	width:100%;
-	height:25vw;
+	height:20vw;
 	background-color:rgba(255,255,255,0.3);
 	overflow:hidden;
 	box-shadow:0vw 0vw 0.06vw 0vw rgba(180,180,180,1.00);
+    margin-bottom:5vw;
 	}
-.p0_essayimg{
-	margin:1vw 1.8vw;
-	width:15vw;
-	height:auto;
-	display:block;
-	float:left;
-}
+
 .cover{
 	background:rgba(0,0,0,0.40);
 	float:left;
@@ -182,16 +224,17 @@ height:auto;}
 
 .grid{
     width: 75.5vw;
-    height: 20vw;
+
     overflow: hidden;
     position: relative;
     margin: 1vw 0;
+    vertical-align:middle;
 }
 
 .grid-block{
     display: block;
-    width: 22%;
-    margin-left:2.2vw;
+    width: 18%;
+    margin-left:4.5vw;
     float: left;
     cursor:pointer;
 }
@@ -211,15 +254,18 @@ height:auto;}
 .grid-item figcaption{
     display: none;
     opacity: 0;
+    border-bottom:none;
 }
 
 .grid-item:hover{
     background:#000;
+    border-bottom:none;
 }
 
 .grid-item:hover img{
     background-color: #fff;
     opacity: 0.6;
+    border-bottom:none;
 }
 
 .grid-item:hover figcaption{
@@ -230,6 +276,7 @@ height:auto;}
     height: 100%;
     opacity: 1;
     position: absolute;
+    border-bottom:none;
 }
 
 .grid-item:hover figcaption h3{

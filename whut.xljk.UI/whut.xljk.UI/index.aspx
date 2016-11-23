@@ -61,13 +61,14 @@
                 <!--轮播图-->
                 <div id="carousel-example-generic" class="carousel slide zxzl-carousel" data-ride="carousel">
                     <!-- Indicators -->
-                    <div class="carousel-indicators-warrper"></div>
-                    <ol class="carousel-indicators">
+                    <div class="carousel-indicators-warrper"></div>                
+                    <ol class="carousel-indicators">                     
                         <li  data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
                         <li  data-target="#carousel-example-generic" data-slide-to="1"></li>
                         <li  data-target="#carousel-example-generic" data-slide-to="2"></li>
                         <li  data-target="#carousel-example-generic" data-slide-to="3"></li>
                     </ol>
+                    
                     <!-- Wrapper for slides -->
                     <div class="carousel-inner" role="listbox">
                         <%=PreImg %>
@@ -75,6 +76,7 @@
                     <!-- Controls -->
                     <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev"></a>
                     <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next"></a>
+                    <p id="carousel_sub">求大佬放小弟一条生路，去看画江湖</p>
                 </div>
 
             <!--首页轮播图右侧的三个按钮 各个页面通用-->
@@ -82,8 +84,8 @@
 
         <!--中心动态 2-->
         <div class="p0_news">
-            <img src="images/xinwenIcon.png" class="newstittle" style="width: 9.5vw; height: auto">
-            <hr style="border: 0.03vw solid gray;margin-top:1.2vw;margin-bottom:1.2vw;">
+            <img src="images/xinwenIcon.png" class="newstittle" style="width: 7vw; height: auto">
+            <hr style="border: 0.03vw solid gray;margin-top:0.7vw;margin-bottom:0.7vw;">
             <img src="images/centermain.png" style="display: block; width: 4vw;">
 
             <div class="newsleft">
@@ -111,8 +113,8 @@
         <!--问答案例 动态的，需要换文字-->
         <div class="p0_qa">
             <!--首页问答-->
-            <img src="images/wendaIcon.png" style="width: 9.5vw; height: auto">
-            <hr style="margin-top:1.3vw;margin-bottom:1.2vw;border-top: 0.06vw solid gray;">
+            <img src="images/wendaIcon.png" style="width: 7vw; height: auto">
+            <hr style="margin-top:0.8vw;margin-bottom:0.7vw;border-top: 0.06vw solid gray;">
             <p>
                 <img src="images/wen.png">&nbsp;好方啊，大学好迷茫。。
            
@@ -131,8 +133,8 @@
 
         <!--心理美文 5-->
         <div class="p0_essay">
-            <img src="images/xinliIcon.png" style="width: 9.5vw; height: auto;margin:2vw 0vw 0vw 2vw;">
-            <hr style="margin:1vw auto 2vw; border: 0.03vw solid gray;width:74vw;">
+            <img src="images/xinliIcon.png" style="width: 7vw; height: auto;margin:1vw 0vw 0vw 2vw;">
+            <hr style="margin:0.6vw auto 1vw; border: 0.03vw solid gray;width:73.5vw;">
 
             <div class="grid">
                 <%=preMeiwen %>
