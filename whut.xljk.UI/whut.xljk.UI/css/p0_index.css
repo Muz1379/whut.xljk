@@ -14,12 +14,13 @@
     height:2.5vw;
     bottom:0vw;
     left:15.6vw;
+
 }
  .carousel-indicators li {
     top:0.6vw;
     position:relative;
     left:13vw;
-
+    z-index:999;
     }
 #carousel_sub {
     font-size:1.2vw;
@@ -61,10 +62,10 @@
 	margin-top:1vw;
     margin-bottom:2vw;
 	width:52vw;
-	height:60vw;
+	height:55vw;
 	float:left;
 	background-color:rgba(255,255,255,0.3);
-	padding:0vw 1.81vw 1.2vw;
+	padding:0vw 1.81vw 0vw;
 	box-shadow:0vw 0vw 0.06vw 0vw rgba(180,180,180,1.00);
 	
 	}/* 总版块 */
@@ -74,7 +75,7 @@
 .newsleft{
 	margin-top:0.5vw;
 	width:23vw;
-    height:28vw;
+    height:25vw;
 	float:left;
     margin-bottom:1vw;
 	}/* 左侧 */
@@ -97,8 +98,9 @@
 	font-size:1.44vw;
 	font-family:"等线Light";
 	margin-top:0.6vw;
-    width:20vw;
-    height:2vw;
+    width:23vw;
+    line-height:1.6vw;
+    height:3vw;
     overflow:hidden;
 }
 .newsleft p{
@@ -106,7 +108,7 @@
     font-family: "等线Light";
     margin-top: 0.6vw;
     line-height: 1.5vw;
-    width:28vw;
+    width:23vw;
     height:8vw;
     overflow:hidden;
 }	
@@ -114,7 +116,7 @@
 /* 右侧 */
 .newsright{
 	width:23vw;
-    height:28vw;
+    height:25vw;
 	float:right;	
 	}
 .nrtitle{
@@ -149,6 +151,8 @@
 .newsbottom{
 	float:left;
     width: 28%;
+    height:9vw;
+    margin-top:1vw;
     margin-left:1.8vw;
 	}
 
@@ -224,7 +228,7 @@ height:auto;}
 
 .grid{
     width: 75.5vw;
-
+    height:12vw;
     overflow: hidden;
     position: relative;
     margin: 1vw 0;
@@ -234,6 +238,7 @@ height:auto;}
 .grid-block{
     display: block;
     width: 18%;
+    height:100%;
     margin-left:4.5vw;
     float: left;
     cursor:pointer;

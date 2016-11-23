@@ -87,25 +87,25 @@
             <img src="images/xinwenIcon.png" class="newstittle" style="width: 7vw; height: auto">
             <hr style="border: 0.03vw solid gray;margin-top:0.7vw;margin-bottom:0.7vw;">
             <img src="images/centermain.png" style="display: block; width: 4vw;">
-
+            <p style="color: #33d49d; margin-left: 44vw; cursor: pointer; font-size: 1.2vw;">more></p>
             <div class="newsleft">
                 <%=xwdt_toutiao %>
             </div>
 
             <a href="articleList.aspx?articleCategory=2">
-                <p style="color: #33d49d; margin-left: 44vw; cursor: pointer; font-size: 1.2vw;">more></p>
+                
             </a>
 
             <!--心协动态 3-->
             <img src="images/xinxie.png" style="display: block; clear: left; width: 4vw;">
-
+             <p style="color: #33d49d; margin-left: 44vw; cursor: pointer; font-size: 1.2vw;">more></p>
+            
             <div class="xinxiecontent">
                 <%=xinxie_toutiao%>
             </div>
 
             <a href="articleList.aspx?articleCategory=3">
-                <p style="color: #33d49d; margin-left: 44vw; cursor: pointer; font-size: 1.2vw;">more></p>
-            </a>
+               </a>
         </div>
 
 
