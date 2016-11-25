@@ -8,29 +8,32 @@
     height:22.7vw;
 }
 .carousel-indicators {
+    width:10vw;
+    height:2.5vw;
+    bottom:-1vw;
+    left:48vw;
+    z-index:999;
+}
+.carousel_sub {
     width:52vw;
     background-color:black;
     opacity:0.5;
     height:2.5vw;
-    bottom:0vw;
-    left:15.6vw;
+    left:0vw;
+    position:relative;
+    top:-2.5vw;
+}
 
-}
- .carousel-indicators li {
-    top:0.6vw;
-    position:relative;
-    left:13vw;
-    z-index:999;
-    }
-#carousel_sub {
-    font-size:1.2vw;
-    color:white;
-    position:relative;
-    top:-2vw;
-    z-index:999;
+.carousel_title {
+    position: absolute;
     left:2vw;
-    font-family:'微软雅黑Light';
+    width: 30%;
+    top: 92%;
+    color:white;
+    font-size: 16px;
+    font-family:'Microsoft YaHei';
 }
+
 .carousel-inner {
     position: relative;
     width: 100%;
@@ -47,15 +50,7 @@
     height: 100% !important; 
     overflow: hidden;
     }
-.carousel-title{
-    position: absolute;
-    width: 100% !important;
-    top: 80%;
-    color: #aaa;
-    font-size: 1.2vw;
-    font-weight: bolder;
-    text-align: center;
-}
+
 
 /* 新闻动态 */
 .p0_news{
@@ -95,8 +90,8 @@
 }/* 大图 */
 
 .newsleft h3{
-	font-size:1.44vw;
-	font-family:"等线Light";
+	font-size:1.5vw;
+	font-family:STXihei;
 	margin-top:0.6vw;
     width:23vw;
     line-height:1.6vw;
@@ -105,7 +100,8 @@
 }
 .newsleft p{
     font-size: 1vw;
-    font-family: "等线Light";
+    font-family:'Microsoft YaHei';
+    color:#777;
     margin-top: 0.6vw;
     line-height: 1.5vw;
     width:23vw;
@@ -125,7 +121,7 @@
     height:2vw;
     width:13vw;
     overflow:hidden;
-    font-family:'微软雅黑Light';
+    font-family:'STXihei';
 	}
 .nrtxt{
     line-height: 2vw;
@@ -136,6 +132,8 @@
     width:23vw;
     height:4vw;
     overflow:hidden;
+    font-family:'Microsoft YaHei';
+    color:#777;
 }
 
 
@@ -169,20 +167,25 @@
     
     }
 
-.newsbottom p{
+.newtitle {
+    height: 2vw;
     font-size: 1.2vw;
-    font-family: "等线Light";
+    font-family: "STXihei";
     margin-top: 0.6vw;
+    }
+.newtext{
+       margin-top:0.6vw;
+        height: 9vw;
+        overflow: hidden;
+        color: #777;
+        font-size: 1vw;
+        font-family: 'Microsoft YaHei';
+        line-height: 1.5vw;
+        width: 13vw;
 	}
 
-.newsbottom a {
-  height:9vw;
-  overflow:hidden;
-  font-size:1vw;
-  line-height:1.5vw;
-  width:13vw;
 
-}
+
 /* 问答案例 */		
 .p0_qa{
 	margin-top:1.6vw;
@@ -192,7 +195,7 @@
 	}
 .p0_qa p{
 	font-size:1vw;
-	font-family:"等线Light";
+	font-family:"STXihei";
 	margin-top:0.8vw;
 	line-height:1.5vw;
 	width:23vw;	

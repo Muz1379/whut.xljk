@@ -46,11 +46,11 @@ namespace EmptyProjectNet45_FineUI
                 if (i == 1)
                 {
                     //获得图片信息的位置
-                    sb.AppendFormat("<div class='item active'><div class='carousel-title'>{2}</div><a href='" + @"http://" + "{1}' target='_blank'><img src='images/banner/back{0}.jpg'  alt='{1}' /></a></div>", i, model.C_ImgUrl, model.C_ImgDes);
+                    sb.AppendFormat("<div class='item active'><a href='" + @"http://" + "{1}' target='_blank'><img src='images/banner/back{0}.jpg'  alt='{1}' /></a><p class='carousel_sub'></p><p class='carousel_title'>{2}</p></div>", i, model.C_ImgUrl, model.C_ImgDes);
                 }
                 else
                 {
-                    sb.AppendFormat("<div class='item'><div class='carousel-title'>{2}</div><a href='" + @"http://" + "{1}' target='_blank'><img src='images/banner/back{0}.jpg'  alt='{1}' /></a></div>", i, model.C_ImgUrl, model.C_ImgDes);
+                    sb.AppendFormat("<div class='item'><a href='" + @"http://" + "{1}' target='_blank'><img src='images/banner/back{0}.jpg'  alt='{1}' /></a><p class='carousel_sub'></p><p class='carousel_title'>{2}</p></div>", i, model.C_ImgUrl, model.C_ImgDes);
 
                 }
                 i++;
@@ -60,7 +60,7 @@ namespace EmptyProjectNet45_FineUI
         //中心动态，搜的都是要有图片的新闻
         public string LoadToutiaoNews()
         {
-            List<T_Article> list = bll.GetListByContent(4, 2);
+            List<T_Article> list = bll.GetListByContent(5, 2);
             StringBuilder sb = new StringBuilder();
             int i = 0;
 
@@ -123,7 +123,7 @@ namespace EmptyProjectNet45_FineUI
                 string imgurl = ImgHelper.getImgUrl(first.ArticleContent, @"<img[^>]+src=\s*(?:'(?<src>[^']+)'|""(?<src>[^""]+)""|(?<src>[^>\s]+))\s*[^>]*>", "src")[0].ToString();
                 
 
-                sb.AppendFormat("<div class='newsbottom'><a href='articleDetail.aspx?articleId={2}' class='imglink'><img src='{4}'></a><p class='nrtitle'>{1}</p><a href='articleDetail.aspx?articleId={2}'>{3}</a></div>", first.ArticleContent, first.ArticleTitle, first.ArticleId, ab,imgurl);
+                sb.AppendFormat("<div class='newsbottom'><a href='articleDetail.aspx?articleId={2}' class='imglink'><img src='{4}'></a><a href='articleDetail.aspx?articleId={2}'><p class='newtitle'>{1}</p></a><p class='newtext'>{3}</p></div>", first.ArticleContent, first.ArticleTitle, first.ArticleId, ab,imgurl);
             }
 
             return sb.ToString();

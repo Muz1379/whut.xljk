@@ -60,8 +60,7 @@
     <div class="main" style="height:auto">
                 <!--轮播图-->
                 <div id="carousel-example-generic" class="carousel slide zxzl-carousel" data-ride="carousel">
-                    <!-- Indicators -->
-                    <div class="carousel-indicators-warrper"></div>                
+                    <!-- Indicators -->              
                     <ol class="carousel-indicators">                     
                         <li  data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
                         <li  data-target="#carousel-example-generic" data-slide-to="1"></li>
@@ -76,7 +75,7 @@
                     <!-- Controls -->
                     <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev"></a>
                     <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next"></a>
-                    <p id="carousel_sub">求大佬放小弟一条生路，去看画江湖</p>
+
                 </div>
 
             <!--首页轮播图右侧的三个按钮 各个页面通用-->
